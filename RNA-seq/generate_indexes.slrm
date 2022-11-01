@@ -1,0 +1,48 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=24:00:00
+#SBATCH --mem=64G
+
+#Generate indexes for 50bp and 36bp read lengths.
+HG38_FA='/data/hodges_lab/hg38_genome/hg38.fa'
+HG38_GTF='/data/hodges_lab/hg38_genome/Homo_sapiens.GRCh38.104.modified.gtf'
+RHEMAC10_FA='/data/hodges_lab/rheMac10_genome/rheMac10.fa'
+RHEMAC10_GTF='/data/hodges_lab/rheMac10_genome/Macaca_mulatta.Mmul_10.104.modified.gtf'
+
+## 50bp ##
+#hg38
+#STAR --runThreadN 8 \
+#--runMode genomeGenerate \
+#--genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_49 \
+#--genomeFastaFiles $HG38_FA \
+#--sjdbGTFfile $HG38_GTF \
+#--sjdbOverhang 49 #overhang is maximum readlength-1. 
+
+#rheMac10
+STAR --runThreadN 8 \
+--runMode genomeGenerate \
+--genomeDir /data/hodges_lab/rheMac10_genome/rheMac10_GTF-ensembl.104_index_49 \
+--genomeFastaFiles $RHEMAC10_FA \
+--sjdbGTFfile $RHEMAC10_GTF \
+--sjdbOverhang 49 #overhang is maximum readlength-1.
+
+## 36bp ##
+#hg38
+#STAR --runThreadN 8 \
+#--runMode genomeGenerate \
+#--genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_35 \
+#--genomeFastaFiles $HG38_FA \
+#--sjdbGTFfile $HG38_GTF \
+#--sjdbOverhang 35 #overhang is maximum readlength-1. 
+
+#rheMac10
+STAR --runThreadN 8 \
+--runMode genomeGenerate \
+--genomeDir /data/hodges_lab/rheMac10_genome/rheMac10_GTF-ensembl.104_index_35 \
+--genomeFastaFiles $RHEMAC10_FA \
+--sjdbGTFfile $RHEMAC10_GTF \
+--sjdbOverhang 35 #overhang is maximum readlength-1.

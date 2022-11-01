@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=01-00:00:00
+#SBATCH --mem=120G
+
+cd /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019
+
+#trim
+# use read combined with while loop to read two variables at once.
+DIR='/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019'
+
+while read -r a b ; do    
+    STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 \
+    --readFilesIn ${DIR}/fastq/trimmed_reads/"$a"_val_1.fq ${DIR}/fastq/trimmed_reads/"$a"_val_2.fq \
+    --outFileNamePrefix ${DIR}/star-output/"$a"_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+done < expt-sra_key.txt

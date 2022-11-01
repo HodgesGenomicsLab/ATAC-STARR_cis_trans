@@ -1,0 +1,61 @@
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.0
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 2 BAM files                                      ||
+||                           o GM12878_Rep1_RNA-seq_ensembl.104_Aligned.s ... ||
+||                           o GM12878_Rep2_RNA-seq_ensembl.104_Aligned.s ... ||
+||                                                                            ||
+||             Output file : Human_cross-tissue_RNA-seq_counts_XSAnno_PE.tsv  ||
+||                 Summary : Human_cross-tissue_RNA-seq_counts_XSAnno_PE. ... ||
+||              Annotation : Ensembl.v64.fullTransExon.hg19TorheMac2.hg38 ... ||
+||      Dir for temp files : /data/hodges_lab/ATAC-STARR_B-cells/data/RNA ... ||
+||                                                                            ||
+||                 Threads : 12                                               ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : yes                                              ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : counted                                          ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+||          Chimeric reads : counted                                          ||
+||        Both ends mapped : required                                         ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Ensembl.v64.fullTransExon.hg19TorheMac2.hg38.gtf ...  ||
+||    Features : 529754                                                       ||
+||    Meta-features : 27898                                                   ||
+||    Chromosomes/contigs : 25                                                ||
+||                                                                            ||
+|| Load FASTA contigs from hg38.fa...                                         ||
+||    454 contigs were loaded                                                 ||
+||                                                                            ||
+|| Process BAM file GM12878_Rep1_RNA-seq_ensembl.104_Aligned.sortedByCoor ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 80947593                                             ||
+||    Successfully assigned alignments : 15329694 (18.9%)                     ||
+||    Running time : 30.97 minutes                                            ||
+||                                                                            ||
+|| Process BAM file GM12878_Rep2_RNA-seq_ensembl.104_Aligned.sortedByCoor ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 67483119                                             ||
+||    Successfully assigned alignments : 13424254 (19.9%)                     ||
+||    Running time : 21.51 minutes                                            ||
+||                                                                            ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/data/hodges_lab/ATAC-S  ||
+|| TARR_B-cells/data/RNA-seq/count_matricies/Human_cross-tissue_RNA-seq_coun  ||
+|| ts_XSAnno_PE.tsv.summary"                                                  ||
+||                                                                            ||
+\\============================================================================//
+

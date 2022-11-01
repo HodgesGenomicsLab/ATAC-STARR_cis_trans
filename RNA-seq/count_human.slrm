@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=02:00:00
+#SBATCH --mem=120G
+
+HG38_FA='/data/hodges_lab/hg38_genome/hg38.fa'
+HG38_GTF='/data/hodges_lab/ATAC-STARR_B-cells/data/RNA-seq/Ensembl.v64.fullTransExon.hg19TorheMac2.hg38.gtf'
+RHEMAC10_FA='/data/hodges_lab/rheMac10_genome/rheMac10.fa'
+RHEMAC10_GTF='/data/hodges_lab/ATAC-STARR_B-cells/data/RNA-seq/Ensembl.v64.fullTransExon.hg19TorheMac2.rheMac10.gtf'
+INT_DIR='/data/hodges_lab/ATAC-STARR_B-cells/data/RNA-seq'
+PUB_DIR='/data/hodges_lab/public_data/human-rhesus_RNA-seq'
+
+#Seperate into two files, one for paired end reads (ours) the other for single end reads (public data). Join afterwards. 
+# For the PE file, will need to assess if fragments or individual reads are counted. 
+# For both files, do unstranded mapping since I'm not sure if the public data is forward or reverse stranded. 
+
+#Human
+featureCounts -s 0 -p -B -O -T 12 -F GTF -G $HG38_FA -t exon -g gene_id \
+        -a $HG38_GTF -o ${INT_DIR}/count_matricies/Human_cross-tissue_RNA-seq_counts_XSAnno_PE.tsv \
+        ${INT_DIR}/STAR-output/GM12878_Rep{1..2}_RNA-seq_ensembl.104_Aligned.sortedByCoord.out.bam 

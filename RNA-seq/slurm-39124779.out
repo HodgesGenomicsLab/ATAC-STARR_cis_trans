@@ -1,0 +1,2 @@
+2022-03-22T20:43:41 fasterq-dump.2.11.0 err: fasterq-dump.c fastdump_csra() checking ouput-file 'SRR7647656.fastq' -> RC(rcExe,rcFile,rcPacking,rcName,rcExists)
+fasterq-dump quit with error code 3

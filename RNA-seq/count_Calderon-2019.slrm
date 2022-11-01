@@ -1,0 +1,54 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=01-00:00:00
+#SBATCH --mem=120G
+
+HG38_FA='/data/hodges_lab/hg38_genome/hg38.fa'
+HG38_GTF='/data/hodges_lab/ATAC-STARR_B-cells/data/RNA-seq/Ensembl.v64.fullTransExon.hg19TorheMac2.hg38.gtf'
+INT_DIR='/data/hodges_lab/ATAC-STARR_B-cells/data/RNA-seq'
+PUB_DIR='/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019'
+
+#Seperate into two files, one for paired end reads (ours) the other for single end reads (public data). Join afterwards. 
+# For the PE file, will need to assess if fragments or individual reads are counted. 
+# For both files, do unstranded mapping since I'm not sure if the public data is forward or reverse stranded. 
+
+#Human
+featureCounts -s 0 -p -B -O -T 12 -F GTF -G $HG38_FA -t exon -g gene_id \
+        -a $HG38_GTF -o ${INT_DIR}/count_matricies/Human_Immune-Cell_RNA-seq_counts_XSAnno_PE.tsv \
+        ${PUB_DIR}/star-output/Bulk_B_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Bulk_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Bulk_B_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Bulk_B_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/CD8pos_T_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/CD8pos_T_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/CD8pos_T_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/CD8pos_T_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Effector_CD4pos_T_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Effector_CD4pos_T_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Effector_CD4pos_T_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mature_NK_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mature_NK_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mature_NK_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mature_NK_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mem_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mem_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Mem_B_1010_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Monocytes_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Monocytes_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Monocytes_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Monocytes_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Myeloid_DCs_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Myeloid_DCs_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Myeloid_DCs_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Naive_B_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Naive_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Naive_B_1004_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Naive_B_1010_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Regulatory_T_1001_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Regulatory_T_1002_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Regulatory_T_1003_ensembl.104_Aligned.sortedByCoord.out.bam \
+        ${PUB_DIR}/star-output/Regulatory_T_1004_ensembl.104_Aligned.sortedByCoord.out.bam

@@ -1,0 +1,262 @@
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/CD8pos_T_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 09:46:39 ..... started STAR run
+Mar 25 09:46:40 ..... loading genome
+Mar 25 10:01:58 ..... started mapping
+Mar 25 10:21:38 ..... finished mapping
+Mar 25 10:21:42 ..... started sorting BAM
+Mar 25 10:29:40 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Effector_CD4pos_T_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 10:29:41 ..... started STAR run
+Mar 25 10:29:41 ..... loading genome
+Mar 25 10:34:57 ..... started mapping
+Mar 25 10:59:23 ..... finished mapping
+Mar 25 10:59:28 ..... started sorting BAM
+Mar 25 11:09:37 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Regulatory_T_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 11:09:37 ..... started STAR run
+Mar 25 11:09:37 ..... loading genome
+Mar 25 11:49:52 ..... started mapping
+Mar 25 12:41:19 ..... finished mapping
+Mar 25 12:41:23 ..... started sorting BAM
+Mar 25 12:57:27 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mature_NK_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 12:57:28 ..... started STAR run
+Mar 25 12:57:28 ..... loading genome
+Mar 25 13:55:03 ..... started mapping
+Mar 25 14:19:02 ..... finished mapping
+Mar 25 14:19:07 ..... started sorting BAM
+Mar 25 14:27:41 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Monocytes_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 14:27:41 ..... started STAR run
+Mar 25 14:27:41 ..... loading genome
+Mar 25 14:33:45 ..... started mapping
+Mar 25 14:55:40 ..... finished mapping
+Mar 25 14:55:44 ..... started sorting BAM
+Mar 25 15:02:24 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Myeloid_DCs_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 15:02:24 ..... started STAR run
+Mar 25 15:02:24 ..... loading genome
+Mar 25 15:07:13 ..... started mapping
+Mar 25 15:28:41 ..... finished mapping
+Mar 25 15:28:45 ..... started sorting BAM
+Mar 25 15:35:17 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/CD8pos_T_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 15:35:17 ..... started STAR run
+Mar 25 15:35:17 ..... loading genome
+Mar 25 15:46:06 ..... started mapping
+Mar 25 16:19:36 ..... finished mapping
+Mar 25 16:19:40 ..... started sorting BAM
+Mar 25 16:29:11 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Regulatory_T_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 16:29:12 ..... started STAR run
+Mar 25 16:29:12 ..... loading genome
+Mar 25 16:34:34 ..... started mapping
+Mar 25 16:57:43 ..... finished mapping
+Mar 25 16:57:47 ..... started sorting BAM
+Mar 25 17:06:51 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mature_NK_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 17:06:51 ..... started STAR run
+Mar 25 17:06:51 ..... loading genome
+Mar 25 17:09:58 ..... started mapping
+Mar 25 17:24:11 ..... finished mapping
+Mar 25 17:24:15 ..... started sorting BAM
+Mar 25 17:32:10 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Monocytes_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 17:32:11 ..... started STAR run
+Mar 25 17:32:11 ..... loading genome
+Mar 25 17:41:17 ..... started mapping
+Mar 25 18:02:20 ..... finished mapping
+Mar 25 18:02:24 ..... started sorting BAM
+Mar 25 18:11:37 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Myeloid_DCs_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 18:11:38 ..... started STAR run
+Mar 25 18:11:38 ..... loading genome
+Mar 25 18:14:44 ..... started mapping
+Mar 25 18:38:41 ..... finished mapping
+Mar 25 18:38:47 ..... started sorting BAM
+Mar 25 18:47:44 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/CD8pos_T_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 18:47:44 ..... started STAR run
+Mar 25 18:47:44 ..... loading genome
+Mar 25 19:06:37 ..... started mapping
+Mar 25 19:14:18 ..... finished mapping
+Mar 25 19:14:22 ..... started sorting BAM
+Mar 25 19:20:40 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Effector_CD4pos_T_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 19:20:41 ..... started STAR run
+Mar 25 19:20:41 ..... loading genome
+Mar 25 19:50:38 ..... started mapping
+Mar 25 19:51:26 ..... finished mapping
+Mar 25 19:51:30 ..... started sorting BAM
+Mar 25 19:51:42 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Regulatory_T_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 19:51:43 ..... started STAR run
+Mar 25 19:51:43 ..... loading genome
+Mar 25 19:57:22 ..... started mapping
+Mar 25 20:27:33 ..... finished mapping
+Mar 25 20:27:37 ..... started sorting BAM
+Mar 25 20:38:15 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mature_NK_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 20:38:15 ..... started STAR run
+Mar 25 20:38:15 ..... loading genome
+Mar 25 20:56:27 ..... started mapping
+Mar 25 21:20:22 ..... finished mapping
+Mar 25 21:20:25 ..... started sorting BAM
+Mar 25 21:28:23 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Monocytes_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 21:28:23 ..... started STAR run
+Mar 25 21:28:23 ..... loading genome
+Mar 25 21:50:15 ..... started mapping
+Mar 25 21:57:45 ..... finished mapping
+Mar 25 21:57:49 ..... started sorting BAM
+Mar 25 22:01:34 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/CD8pos_T_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/CD8pos_T_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 22:01:34 ..... started STAR run
+Mar 25 22:01:34 ..... loading genome
+Mar 25 22:14:28 ..... started mapping
+Mar 25 22:40:14 ..... finished mapping
+Mar 25 22:40:18 ..... started sorting BAM
+Mar 25 22:51:00 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Effector_CD4pos_T_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Effector_CD4pos_T_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 22:51:01 ..... started STAR run
+Mar 25 22:51:01 ..... loading genome
+Mar 25 23:18:18 ..... started mapping
+Mar 25 23:46:02 ..... finished mapping
+Mar 25 23:46:05 ..... started sorting BAM
+Mar 25 23:56:26 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Regulatory_T_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Regulatory_T_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 25 23:56:26 ..... started STAR run
+Mar 25 23:56:26 ..... loading genome
+Mar 26 00:01:05 ..... started mapping
+Mar 26 00:15:28 ..... finished mapping
+Mar 26 00:15:31 ..... started sorting BAM
+Mar 26 00:22:43 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mature_NK_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mature_NK_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 00:22:43 ..... started STAR run
+Mar 26 00:22:43 ..... loading genome
+Mar 26 00:42:27 ..... started mapping
+Mar 26 01:03:31 ..... finished mapping
+Mar 26 01:03:34 ..... started sorting BAM
+Mar 26 01:12:59 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Monocytes_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Monocytes_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 01:13:00 ..... started STAR run
+Mar 26 01:13:00 ..... loading genome
+Mar 26 01:19:57 ..... started mapping
+Mar 26 01:36:20 ..... finished mapping
+Mar 26 01:36:24 ..... started sorting BAM
+Mar 26 01:43:27 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Myeloid_DCs_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Myeloid_DCs_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 01:43:28 ..... started STAR run
+Mar 26 01:43:28 ..... loading genome
+Mar 26 02:00:20 ..... started mapping
+Mar 26 02:23:56 ..... finished mapping
+Mar 26 02:23:59 ..... started sorting BAM
+Mar 26 02:34:59 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Bulk_B_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 02:35:00 ..... started STAR run
+Mar 26 02:35:00 ..... loading genome
+Mar 26 02:43:00 ..... started mapping
+Mar 26 03:00:10 ..... finished mapping
+Mar 26 03:00:14 ..... started sorting BAM
+Mar 26 03:09:38 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1001_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1001_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Naive_B_1001_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 03:09:38 ..... started STAR run
+Mar 26 03:09:38 ..... loading genome
+Mar 26 03:19:04 ..... started mapping
+Mar 26 03:33:02 ..... finished mapping
+Mar 26 03:33:06 ..... started sorting BAM
+Mar 26 03:40:06 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Bulk_B_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 03:40:06 ..... started STAR run
+Mar 26 03:40:06 ..... loading genome
+Mar 26 03:43:46 ..... started mapping
+Mar 26 03:59:35 ..... finished mapping
+Mar 26 03:59:39 ..... started sorting BAM
+Mar 26 04:07:44 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mem_B_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 04:07:44 ..... started STAR run
+Mar 26 04:07:44 ..... loading genome
+Mar 26 04:23:16 ..... started mapping
+Mar 26 04:40:16 ..... finished mapping
+Mar 26 04:40:20 ..... started sorting BAM
+Mar 26 04:47:50 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1002_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1002_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Naive_B_1002_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 04:47:50 ..... started STAR run
+Mar 26 04:47:50 ..... loading genome
+Mar 26 04:53:07 ..... started mapping
+Mar 26 05:10:48 ..... finished mapping
+Mar 26 05:10:52 ..... started sorting BAM
+Mar 26 05:19:30 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1003_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1003_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Bulk_B_1003_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 05:19:30 ..... started STAR run
+Mar 26 05:19:30 ..... loading genome
+Mar 26 05:26:47 ..... started mapping
+Mar 26 05:57:34 ..... finished mapping
+Mar 26 05:57:37 ..... started sorting BAM
+Mar 26 06:08:40 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Bulk_B_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Bulk_B_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 06:08:40 ..... started STAR run
+Mar 26 06:08:40 ..... loading genome
+Mar 26 06:13:20 ..... started mapping
+Mar 26 06:43:14 ..... finished mapping
+Mar 26 06:43:18 ..... started sorting BAM
+Mar 26 06:54:02 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mem_B_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 06:54:02 ..... started STAR run
+Mar 26 06:54:02 ..... loading genome
+Mar 26 07:01:41 ..... started mapping
+Mar 26 07:23:05 ..... finished mapping
+Mar 26 07:23:09 ..... started sorting BAM
+Mar 26 07:31:49 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1004_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1004_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Naive_B_1004_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 07:31:50 ..... started STAR run
+Mar 26 07:31:50 ..... loading genome
+Mar 26 07:52:27 ..... started mapping
+Mar 26 08:42:50 ..... finished mapping
+Mar 26 08:42:54 ..... started sorting BAM
+Mar 26 08:58:08 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1010_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Mem_B_1010_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Mem_B_1010_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 08:58:08 ..... started STAR run
+Mar 26 08:58:08 ..... loading genome
+Mar 26 09:07:46 ..... started mapping
+Mar 26 09:16:32 ..... finished mapping
+Mar 26 09:16:36 ..... started sorting BAM
+Mar 26 09:20:19 ..... finished successfully
+	STAR --runMode alignReads --runThreadN 12 --genomeDir /data/hodges_lab/hg38_genome/hg38_GTF-ensembl.104_index_99 --readFilesIn /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1010_val_1.fq /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/Naive_B_1010_val_2.fq --outFileNamePrefix /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/star-output/Naive_B_1010_ensembl.104_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.10a   compiled: 2022-01-14T18:50:00-05:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 26 09:20:20 ..... started STAR run
+Mar 26 09:20:20 ..... loading genome
+Mar 26 09:32:59 ..... started mapping
+slurmstepd: error: *** JOB 39229092 ON cn1616 CANCELLED AT 2022-03-26T09:46:41 DUE TO TIME LIMIT ***

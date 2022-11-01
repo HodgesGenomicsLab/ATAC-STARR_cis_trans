@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=08:00:00
+#SBATCH --mem=120G
+
+cd /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019
+
+#trim
+# use read combined with while loop to read two variables at once.
+DIR='/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019'
+
+while read -r a b ; do    
+    trim_galore --paired -j 12 --fastqc --fastqc_args "--outdir ${DIR}/processing_results/fastQC" --dont_gzip --basename "$a" \
+    --output_dir ${DIR}/fastq/trimmed_reads ${DIR}/fastq/"$b"_1.fastq ${DIR}/fastq/"$b"_2.fastq 
+done < expt-sra_key_2.txt

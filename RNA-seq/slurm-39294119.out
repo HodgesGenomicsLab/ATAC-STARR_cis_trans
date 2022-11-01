@@ -1,0 +1,280 @@
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.1
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 33 BAM files                                     ||
+||                           o Bulk_B_1001_ensembl.104_Aligned.sortedByCo ... ||
+||                           o Bulk_B_1002_ensembl.104_Aligned.sortedByCo ... ||
+||                           o Bulk_B_1003_ensembl.104_Aligned.sortedByCo ... ||
+||                           o Bulk_B_1004_ensembl.104_Aligned.sortedByCo ... ||
+||                           o CD8pos_T_1001_ensembl.104_Aligned.sortedBy ... ||
+||                           o CD8pos_T_1002_ensembl.104_Aligned.sortedBy ... ||
+||                           o CD8pos_T_1003_ensembl.104_Aligned.sortedBy ... ||
+||                           o CD8pos_T_1004_ensembl.104_Aligned.sortedBy ... ||
+||                           o Effector_CD4pos_T_1001_ensembl.104_Aligned ... ||
+||                           o Effector_CD4pos_T_1003_ensembl.104_Aligned ... ||
+||                           o Effector_CD4pos_T_1004_ensembl.104_Aligned ... ||
+||                           o Mature_NK_1001_ensembl.104_Aligned.sortedB ... ||
+||                           o Mature_NK_1002_ensembl.104_Aligned.sortedB ... ||
+||                           o Mature_NK_1003_ensembl.104_Aligned.sortedB ... ||
+||                           o Mature_NK_1004_ensembl.104_Aligned.sortedB ... ||
+||                           o Mem_B_1002_ensembl.104_Aligned.sortedByCoo ... ||
+||                           o Mem_B_1002_ensembl.104_Aligned.sortedByCoo ... ||
+||                           o Mem_B_1010_ensembl.104_Aligned.sortedByCoo ... ||
+||                           o Monocytes_1001_ensembl.104_Aligned.sortedB ... ||
+||                           o Monocytes_1002_ensembl.104_Aligned.sortedB ... ||
+||                           o Monocytes_1003_ensembl.104_Aligned.sortedB ... ||
+||                           o Monocytes_1004_ensembl.104_Aligned.sortedB ... ||
+||                           o Myeloid_DCs_1001_ensembl.104_Aligned.sorte ... ||
+||                           o Myeloid_DCs_1002_ensembl.104_Aligned.sorte ... ||
+||                           o Myeloid_DCs_1004_ensembl.104_Aligned.sorte ... ||
+||                           o Naive_B_1001_ensembl.104_Aligned.sortedByC ... ||
+||                           o Naive_B_1002_ensembl.104_Aligned.sortedByC ... ||
+||                           o Naive_B_1004_ensembl.104_Aligned.sortedByC ... ||
+||                           o Naive_B_1010_ensembl.104_Aligned.sortedByC ... ||
+||                           o Regulatory_T_1001_ensembl.104_Aligned.sort ... ||
+||                           o Regulatory_T_1002_ensembl.104_Aligned.sort ... ||
+||                           o Regulatory_T_1003_ensembl.104_Aligned.sort ... ||
+||                           o Regulatory_T_1004_ensembl.104_Aligned.sort ... ||
+||                                                                            ||
+||             Output file : Human_cross-tissue_RNA-seq_counts_XSAnno_PE.tsv  ||
+||                 Summary : Human_cross-tissue_RNA-seq_counts_XSAnno_PE. ... ||
+||              Annotation : Ensembl.v64.fullTransExon.hg19TorheMac2.hg38 ... ||
+||      Dir for temp files : /data/hodges_lab/ATAC-STARR_B-cells/data/RNA ... ||
+||                                                                            ||
+||                 Threads : 12                                               ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : yes                                              ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : counted                                          ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+||          Chimeric reads : counted                                          ||
+||        Both ends mapped : required                                         ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Ensembl.v64.fullTransExon.hg19TorheMac2.hg38.gtf ...  ||
+||    Features : 529754                                                       ||
+||    Meta-features : 27898                                                   ||
+||    Chromosomes/contigs : 25                                                ||
+||                                                                            ||
+|| Load FASTA contigs from hg38.fa...                                         ||
+||    454 contigs were loaded                                                 ||
+||                                                                            ||
+|| Process BAM file Bulk_B_1001_ensembl.104_Aligned.sortedByCoord.out.bam...  ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 54416338                                             ||
+||    Successfully assigned alignments : 18087912 (33.2%)                     ||
+||    Running time : 36.24 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Bulk_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam...  ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 48390304                                             ||
+||    Successfully assigned alignments : 10278853 (21.2%)                     ||
+||    Running time : 10.63 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Bulk_B_1003_ensembl.104_Aligned.sortedByCoord.out.bam...  ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 60611172                                             ||
+||    Successfully assigned alignments : 14244859 (23.5%)                     ||
+||    Running time : 26.92 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Bulk_B_1004_ensembl.104_Aligned.sortedByCoord.out.bam...  ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 62591059                                             ||
+||    Successfully assigned alignments : 18801972 (30.0%)                     ||
+||    Running time : 44.13 minutes                                            ||
+||                                                                            ||
+|| Process BAM file CD8pos_T_1001_ensembl.104_Aligned.sortedByCoord.out.b ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 61332457                                             ||
+||    Successfully assigned alignments : 17195372 (28.0%)                     ||
+||    Running time : 13.78 minutes                                            ||
+||                                                                            ||
+|| Process BAM file CD8pos_T_1002_ensembl.104_Aligned.sortedByCoord.out.b ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 91740852                                             ||
+||    Successfully assigned alignments : 19707392 (21.5%)                     ||
+||    Running time : 84.25 minutes                                            ||
+||                                                                            ||
+|| Process BAM file CD8pos_T_1003_ensembl.104_Aligned.sortedByCoord.out.b ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 14627908                                             ||
+||    Successfully assigned alignments : 4686761 (32.0%)                      ||
+||    Running time : 1.61 minutes                                             ||
+||                                                                            ||
+|| Process BAM file CD8pos_T_1004_ensembl.104_Aligned.sortedByCoord.out.b ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 63987494                                             ||
+||    Successfully assigned alignments : 17366895 (27.1%)                     ||
+||    Running time : 22.05 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Effector_CD4pos_T_1001_ensembl.104_Aligned.sortedByCo ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 54955839                                             ||
+||    Successfully assigned alignments : 18675182 (34.0%)                     ||
+||    Running time : 7.77 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Effector_CD4pos_T_1003_ensembl.104_Aligned.sortedByCo ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 1308508                                              ||
+||    Successfully assigned alignments : 538318 (41.1%)                       ||
+||    Running time : 0.26 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Effector_CD4pos_T_1004_ensembl.104_Aligned.sortedByCo ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 64942007                                             ||
+||    Successfully assigned alignments : 16197282 (24.9%)                     ||
+||    Running time : 25.62 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Mature_NK_1001_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 45863139                                             ||
+||    Successfully assigned alignments : 17328007 (37.8%)                     ||
+||    Running time : 12.87 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Mature_NK_1002_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 48067402                                             ||
+||    Successfully assigned alignments : 13714994 (28.5%)                     ||
+||    Running time : 14.41 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Mature_NK_1003_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 41648731                                             ||
+||    Successfully assigned alignments : 13760553 (33.0%)                     ||
+||    Running time : 7.45 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Mature_NK_1004_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52895281                                             ||
+||    Successfully assigned alignments : 18331758 (34.7%)                     ||
+||    Running time : 9.52 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Mem_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam...   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 46947808                                             ||
+||    Successfully assigned alignments : 10849761 (23.1%)                     ||
+||    Running time : 16.58 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Mem_B_1002_ensembl.104_Aligned.sortedByCoord.out.bam...   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 46947808                                             ||
+||    Successfully assigned alignments : 10849761 (23.1%)                     ||
+||    Running time : 16.46 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Mem_B_1010_ensembl.104_Aligned.sortedByCoord.out.bam...   ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 17158998                                             ||
+||    Successfully assigned alignments : 931151 (5.4%)                        ||
+||    Running time : 1.86 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Monocytes_1001_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 52033302                                             ||
+||    Successfully assigned alignments : 19728774 (37.9%)                     ||
+||    Running time : 8.49 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Monocytes_1002_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 63368354                                             ||
+||    Successfully assigned alignments : 15873075 (25.0%)                     ||
+||    Running time : 24.10 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Monocytes_1003_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 15307673                                             ||
+||    Successfully assigned alignments : 4880019 (31.9%)                      ||
+||    Running time : 1.39 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Monocytes_1004_ensembl.104_Aligned.sortedByCoord.out. ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 42178157                                             ||
+||    Successfully assigned alignments : 12047092 (28.6%)                     ||
+||    Running time : 11.04 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Myeloid_DCs_1001_ensembl.104_Aligned.sortedByCoord.ou ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 49012718                                             ||
+||    Successfully assigned alignments : 17606051 (35.9%)                     ||
+||    Running time : 10.26 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Myeloid_DCs_1002_ensembl.104_Aligned.sortedByCoord.ou ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 63416007                                             ||
+||    Successfully assigned alignments : 18027164 (28.4%)                     ||
+||    Running time : 14.55 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Myeloid_DCs_1004_ensembl.104_Aligned.sortedByCoord.ou ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 65237716                                             ||
+||    Successfully assigned alignments : 20165513 (30.9%)                     ||
+||    Running time : 15.51 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Naive_B_1001_ensembl.104_Aligned.sortedByCoord.out.ba ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 47676661                                             ||
+||    Successfully assigned alignments : 15171856 (31.8%)                     ||
+||    Running time : 37.84 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Naive_B_1002_ensembl.104_Aligned.sortedByCoord.out.ba ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 56350581                                             ||
+||    Successfully assigned alignments : 12232760 (21.7%)                     ||
+||    Running time : 20.58 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Naive_B_1004_ensembl.104_Aligned.sortedByCoord.out.ba ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 81113480                                             ||
+||    Successfully assigned alignments : 19675391 (24.3%)                     ||
+||    Running time : 10.92 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Naive_B_1010_ensembl.104_Aligned.sortedByCoord.out.ba ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 43529375                                             ||
+||    Successfully assigned alignments : 6186139 (14.2%)                      ||
+||    Running time : 4.13 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Regulatory_T_1001_ensembl.104_Aligned.sortedByCoord.o ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 58919714                                             ||
+||    Successfully assigned alignments : 18629339 (31.6%)                     ||
+||    Running time : 9.55 minutes                                             ||
+||                                                                            ||
+|| Process BAM file Regulatory_T_1002_ensembl.104_Aligned.sortedByCoord.o ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 61405184                                             ||
+||    Successfully assigned alignments : 18580866 (30.3%)                     ||
+||    Running time : 23.97 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Regulatory_T_1003_ensembl.104_Aligned.sortedByCoord.o ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 65630315                                             ||
+||    Successfully assigned alignments : 22572051 (34.4%)                     ||
+||    Running time : 17.02 minutes                                            ||
+||                                                                            ||
+|| Process BAM file Regulatory_T_1004_ensembl.104_Aligned.sortedByCoord.o ... ||
+||    Paired-end reads are included.                                          ||
+||    Total alignments : 39634636                                             ||
+||    Successfully assigned alignments : 12755648 (32.2%)                     ||
+||    Running time : 7.62 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/data/hodges_lab/ATAC-S  ||
+|| TARR_B-cells/data/RNA-seq/count_matricies/Human_cross-tissue_RNA-seq_coun  ||
+|| ts_XSAnno_PE.tsv.summary"                                                  ||
+||                                                                            ||
+\\============================================================================//
+

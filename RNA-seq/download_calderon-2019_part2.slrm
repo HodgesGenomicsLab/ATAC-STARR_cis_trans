@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=01-00:00:00
+#SBATCH --mem=120G
+
+#download data
+cd /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019
+
+fasterq-dump -3 --skip-technical --mem 120G --threads 12 \
+    SRR7647658 SRR7647696 SRR7647698 SRR7647700 SRR7647731 SRR7647767 SRR7647768 \
+    SRR7647769 SRR7647807 SRR7647808

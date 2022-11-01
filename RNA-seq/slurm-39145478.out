@@ -1,0 +1,2187 @@
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Naive_B_1001<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	50	CTGTCTCTTATA	1000000	0.01
+Illumina	1	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 50). Second best hit was Illumina (count: 1)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647658_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647658_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_1.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_1.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 866.51 s (29 us/read; 2.07 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,940,554
+Reads with adapters:                13,152,940 (43.9%)
+Reads written (passing filters):    29,940,554 (100.0%)
+
+Total basepairs processed: 2,907,334,122 bp
+Quality-trimmed:               1,753,982 bp (0.1%)
+Total written (filtered):  2,886,773,037 bp (99.3%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 13152940 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 20.8%
+  C: 30.2%
+  G: 26.9%
+  T: 22.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	9535097	7485138.5	0	9535097
+2	2321564	1871284.6	0	2321564
+3	946139	467821.2	0	946139
+4	327885	116955.3	0	327885
+5	6585	29238.8	0	6585
+6	4124	7309.7	0	4124
+7	1012	1827.4	0	1012
+8	221	456.9	0	221
+9	32	114.2	0	7 25
+10	197	28.6	1	8 189
+11	208	7.1	1	1 207
+12	202	1.8	1	21 181
+13	133	1.8	1	7 126
+14	283	1.8	1	30 253
+15	234	1.8	1	24 210
+16	720	1.8	1	134 586
+17	233	1.8	1	30 203
+18	445	1.8	1	76 369
+19	293	1.8	1	41 252
+20	185	1.8	1	16 169
+21	275	1.8	1	46 229
+22	106	1.8	1	16 90
+23	356	1.8	1	82 274
+24	134	1.8	1	24 110
+25	206	1.8	1	45 161
+26	301	1.8	1	53 248
+27	249	1.8	1	68 181
+28	266	1.8	1	63 203
+29	301	1.8	1	54 247
+30	72	1.8	1	9 63
+31	168	1.8	1	35 133
+32	67	1.8	1	4 63
+33	174	1.8	1	27 147
+34	149	1.8	1	29 120
+35	106	1.8	1	14 92
+36	116	1.8	1	22 94
+37	94	1.8	1	17 77
+38	111	1.8	1	9 102
+39	104	1.8	1	10 94
+40	75	1.8	1	10 65
+41	68	1.8	1	2 66
+42	72	1.8	1	7 65
+43	72	1.8	1	8 64
+44	55	1.8	1	6 49
+45	53	1.8	1	5 48
+46	43	1.8	1	0 43
+47	51	1.8	1	2 49
+48	52	1.8	1	4 48
+49	52	1.8	1	0 52
+50	60	1.8	1	2 58
+51	54	1.8	1	2 52
+52	49	1.8	1	1 48
+53	51	1.8	1	0 51
+54	61	1.8	1	0 61
+55	47	1.8	1	1 46
+56	51	1.8	1	1 50
+57	32	1.8	1	2 30
+58	77	1.8	1	0 77
+59	38	1.8	1	0 38
+60	52	1.8	1	0 52
+61	50	1.8	1	0 50
+62	47	1.8	1	1 46
+63	101	1.8	1	0 101
+64	35	1.8	1	0 35
+65	53	1.8	1	0 53
+66	47	1.8	1	1 46
+67	43	1.8	1	1 42
+68	89	1.8	1	1 88
+69	42	1.8	1	0 42
+70	68	1.8	1	0 68
+71	34	1.8	1	2 32
+72	38	1.8	1	2 36
+73	92	1.8	1	0 92
+74	43	1.8	1	0 43
+75	261	1.8	1	0 261
+76	83	1.8	1	0 83
+77	46	1.8	1	0 46
+78	89	1.8	1	1 88
+79	50	1.8	1	0 50
+80	80	1.8	1	0 80
+81	52	1.8	1	0 52
+82	31	1.8	1	0 31
+83	83	1.8	1	0 83
+84	56	1.8	1	0 56
+85	160	1.8	1	1 159
+86	101	1.8	1	0 101
+87	46	1.8	1	0 46
+88	101	1.8	1	0 101
+89	33	1.8	1	0 33
+90	32	1.8	1	0 32
+91	50	1.8	1	0 50
+92	37	1.8	1	0 37
+93	147	1.8	1	0 147
+94	15	1.8	1	0 15
+95	31	1.8	1	0 31
+96	21	1.8	1	0 21
+97	42	1.8	1	0 42
+98	85	1.8	1	0 85
+99	25	1.8	1	0 25
+100	72	1.8	1	0 72
+101	17	1.8	1	0 17
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_1.fastq
+=============================================
+29940554 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647658_2.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_2.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j -j 12
+Writing final adapter and quality trimmed output to SRR7647658_2_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_2.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_2.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 873.29 s (29 us/read; 2.06 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,940,554
+Reads with adapters:                13,202,699 (44.1%)
+Reads written (passing filters):    29,940,554 (100.0%)
+
+Total basepairs processed: 2,908,593,716 bp
+Quality-trimmed:               5,535,754 bp (0.2%)
+Total written (filtered):  2,883,877,442 bp (99.2%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 13202699 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 20.9%
+  C: 29.9%
+  G: 26.9%
+  T: 22.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	9575855	7485138.5	0	9575855
+2	2306658	1871284.6	0	2306658
+3	958590	467821.2	0	958590
+4	321256	116955.3	0	321256
+5	8687	29238.8	0	8687
+6	4656	7309.7	0	4656
+7	1667	1827.4	0	1667
+8	676	456.9	0	676
+9	229	114.2	0	152 77
+10	486	28.6	1	61 425
+11	451	7.1	1	78 373
+12	323	1.8	1	67 256
+13	395	1.8	1	60 335
+14	554	1.8	1	61 493
+15	840	1.8	1	95 745
+16	1404	1.8	1	223 1181
+17	1170	1.8	1	180 990
+18	1399	1.8	1	232 1167
+19	1113	1.8	1	197 916
+20	496	1.8	1	94 402
+21	663	1.8	1	142 521
+22	752	1.8	1	163 589
+23	695	1.8	1	200 495
+24	888	1.8	1	251 637
+25	912	1.8	1	275 637
+26	957	1.8	1	345 612
+27	853	1.8	1	305 548
+28	1086	1.8	1	417 669
+29	904	1.8	1	424 480
+30	536	1.8	1	195 341
+31	639	1.8	1	236 403
+32	505	1.8	1	247 258
+33	523	1.8	1	221 302
+34	469	1.8	1	194 275
+35	319	1.8	1	145 174
+36	296	1.8	1	121 175
+37	321	1.8	1	109 212
+38	280	1.8	1	91 189
+39	214	1.8	1	59 155
+40	147	1.8	1	48 99
+41	149	1.8	1	42 107
+42	124	1.8	1	40 84
+43	106	1.8	1	32 74
+44	102	1.8	1	14 88
+45	75	1.8	1	12 63
+46	88	1.8	1	14 74
+47	50	1.8	1	6 44
+48	54	1.8	1	6 48
+49	52	1.8	1	7 45
+50	54	1.8	1	3 51
+51	67	1.8	1	3 64
+52	45	1.8	1	0 45
+53	57	1.8	1	4 53
+54	76	1.8	1	0 76
+55	46	1.8	1	0 46
+56	46	1.8	1	1 45
+57	48	1.8	1	0 48
+58	62	1.8	1	0 62
+59	38	1.8	1	0 38
+60	50	1.8	1	1 49
+61	44	1.8	1	2 42
+62	47	1.8	1	1 46
+63	94	1.8	1	0 94
+64	36	1.8	1	2 34
+65	55	1.8	1	0 55
+66	48	1.8	1	2 46
+67	36	1.8	1	2 34
+68	86	1.8	1	1 85
+69	50	1.8	1	2 48
+70	61	1.8	1	1 60
+71	27	1.8	1	0 27
+72	35	1.8	1	0 35
+73	75	1.8	1	0 75
+74	58	1.8	1	0 58
+75	214	1.8	1	0 214
+76	67	1.8	1	0 67
+77	50	1.8	1	1 49
+78	89	1.8	1	0 89
+79	46	1.8	1	0 46
+80	93	1.8	1	0 93
+81	38	1.8	1	0 38
+82	35	1.8	1	0 35
+83	58	1.8	1	2 56
+84	64	1.8	1	1 63
+85	150	1.8	1	0 150
+86	84	1.8	1	0 84
+87	42	1.8	1	0 42
+88	83	1.8	1	0 83
+89	29	1.8	1	0 29
+90	21	1.8	1	0 21
+91	56	1.8	1	0 56
+92	40	1.8	1	0 40
+93	152	1.8	1	2 150
+94	23	1.8	1	0 23
+95	28	1.8	1	0 28
+96	29	1.8	1	0 29
+97	41	1.8	1	0 41
+98	93	1.8	1	0 93
+99	23	1.8	1	0 23
+100	34	1.8	1	0 34
+101	12	1.8	1	0 12
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647658_2.fastq
+=============================================
+29940554 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR7647658_1_trimmed.fq and SRR7647658_2_trimmed.fq
+Now renaming the output files
+
+ORIGINAL FILE 1: >>SRR7647658_1_trimmed.fq<<	RENAMING TO:>>Naive_B_1001_R1_trimmed.fq<<
+ORIGINAL FILE 2: >>SRR7647658_2_trimmed.fq<<	RENAMING TO:>>Naive_B_1001_R2_trimmed.fq<<
+file_1: Naive_B_1001_R1_trimmed.fq, file_2: Naive_B_1001_R2_trimmed.fq
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Naive_B_1001_R1_trimmed.fq and Naive_B_1001_R2_trimmed.fq <<<<<
+Renaming the output files (AGAIN).
+Writing validated paired-end Read 1 reads to Naive_B_1001_val_1.fq
+Writing validated paired-end Read 2 reads to Naive_B_1001_val_2.fq
+
+Total number of sequences analysed: 29940554
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 3689 (0.01%)
+
+
+  >>> Now running FastQC on the validated data Naive_B_1001_val_1.fq<<<
+
+Started analysis of Naive_B_1001_val_1.fq
+Approx 5% complete for Naive_B_1001_val_1.fq
+Approx 10% complete for Naive_B_1001_val_1.fq
+Approx 15% complete for Naive_B_1001_val_1.fq
+Approx 20% complete for Naive_B_1001_val_1.fq
+Approx 25% complete for Naive_B_1001_val_1.fq
+Approx 30% complete for Naive_B_1001_val_1.fq
+Approx 35% complete for Naive_B_1001_val_1.fq
+Approx 40% complete for Naive_B_1001_val_1.fq
+Approx 45% complete for Naive_B_1001_val_1.fq
+Approx 50% complete for Naive_B_1001_val_1.fq
+Approx 55% complete for Naive_B_1001_val_1.fq
+Approx 60% complete for Naive_B_1001_val_1.fq
+Approx 65% complete for Naive_B_1001_val_1.fq
+Approx 70% complete for Naive_B_1001_val_1.fq
+Approx 75% complete for Naive_B_1001_val_1.fq
+Approx 80% complete for Naive_B_1001_val_1.fq
+Approx 85% complete for Naive_B_1001_val_1.fq
+Approx 90% complete for Naive_B_1001_val_1.fq
+Approx 95% complete for Naive_B_1001_val_1.fq
+Analysis complete for Naive_B_1001_val_1.fq
+
+  >>> Now running FastQC on the validated data Naive_B_1001_val_2.fq<<<
+
+Started analysis of Naive_B_1001_val_2.fq
+Approx 5% complete for Naive_B_1001_val_2.fq
+Approx 10% complete for Naive_B_1001_val_2.fq
+Approx 15% complete for Naive_B_1001_val_2.fq
+Approx 20% complete for Naive_B_1001_val_2.fq
+Approx 25% complete for Naive_B_1001_val_2.fq
+Approx 30% complete for Naive_B_1001_val_2.fq
+Approx 35% complete for Naive_B_1001_val_2.fq
+Approx 40% complete for Naive_B_1001_val_2.fq
+Approx 45% complete for Naive_B_1001_val_2.fq
+Approx 50% complete for Naive_B_1001_val_2.fq
+Approx 55% complete for Naive_B_1001_val_2.fq
+Approx 60% complete for Naive_B_1001_val_2.fq
+Approx 65% complete for Naive_B_1001_val_2.fq
+Approx 70% complete for Naive_B_1001_val_2.fq
+Approx 75% complete for Naive_B_1001_val_2.fq
+Approx 80% complete for Naive_B_1001_val_2.fq
+Approx 85% complete for Naive_B_1001_val_2.fq
+Approx 90% complete for Naive_B_1001_val_2.fq
+Approx 95% complete for Naive_B_1001_val_2.fq
+Analysis complete for Naive_B_1001_val_2.fq
+Deleting both intermediate output files Naive_B_1001_R1_trimmed.fq and Naive_B_1001_R2_trimmed.fq
+
+====================================================================================================
+
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Bulk_B_1002<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	512	CTGTCTCTTATA	1000000	0.05
+Illumina	9	AGATCGGAAGAGC	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 512). Second best hit was Illumina (count: 9)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647696_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647696_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_1.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_1.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 815.56 s (27 us/read; 2.22 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              30,169,100
+Reads with adapters:                11,736,032 (38.9%)
+Reads written (passing filters):    30,169,100 (100.0%)
+
+Total basepairs processed: 2,706,027,919 bp
+Quality-trimmed:               5,972,129 bp (0.2%)
+Total written (filtered):  2,682,232,683 bp (99.1%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 11736032 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 27.8%
+  C: 26.5%
+  G: 22.2%
+  T: 23.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8917940	7542275.0	0	8917940
+2	1815101	1885568.8	0	1815101
+3	681347	471392.2	0	681347
+4	248892	117848.0	0	248892
+5	7363	29462.0	0	7363
+6	5402	7365.5	0	5402
+7	1300	1841.4	0	1300
+8	204	460.3	0	204
+9	160	115.1	0	20 140
+10	433	28.8	1	12 421
+11	678	7.2	1	13 665
+12	897	1.8	1	74 823
+13	525	1.8	1	10 515
+14	1674	1.8	1	127 1547
+15	758	1.8	1	38 720
+16	4127	1.8	1	969 3158
+17	750	1.8	1	103 647
+18	1385	1.8	1	307 1078
+19	877	1.8	1	155 722
+20	940	1.8	1	187 753
+21	1802	1.8	1	459 1343
+22	478	1.8	1	45 433
+23	1902	1.8	1	486 1416
+24	336	1.8	1	51 285
+25	1237	1.8	1	283 954
+26	1984	1.8	1	461 1523
+27	1968	1.8	1	495 1473
+28	1610	1.8	1	410 1200
+29	2329	1.8	1	530 1799
+30	215	1.8	1	33 182
+31	1701	1.8	1	391 1310
+32	275	1.8	1	34 241
+33	2355	1.8	1	575 1780
+34	1135	1.8	1	229 906
+35	466	1.8	1	107 359
+36	1707	1.8	1	379 1328
+37	1194	1.8	1	289 905
+38	942	1.8	1	195 747
+39	1213	1.8	1	279 934
+40	1598	1.8	1	366 1232
+41	1047	1.8	1	226 821
+42	1316	1.8	1	287 1029
+43	1959	1.8	1	507 1452
+44	543	1.8	1	121 422
+45	583	1.8	1	118 465
+46	255	1.8	1	50 205
+47	408	1.8	1	82 326
+48	552	1.8	1	127 425
+49	434	1.8	1	84 350
+50	578	1.8	1	98 480
+51	561	1.8	1	119 442
+52	333	1.8	1	37 296
+53	358	1.8	1	69 289
+54	470	1.8	1	94 376
+55	269	1.8	1	45 224
+56	206	1.8	1	25 181
+57	229	1.8	1	31 198
+58	327	1.8	1	28 299
+59	240	1.8	1	55 185
+60	237	1.8	1	6 231
+61	213	1.8	1	27 186
+62	181	1.8	1	19 162
+63	219	1.8	1	14 205
+64	181	1.8	1	10 171
+65	160	1.8	1	13 147
+66	122	1.8	1	7 115
+67	177	1.8	1	6 171
+68	303	1.8	1	10 293
+69	159	1.8	1	10 149
+70	192	1.8	1	9 183
+71	112	1.8	1	3 109
+72	106	1.8	1	3 103
+73	264	1.8	1	0 264
+74	142	1.8	1	0 142
+75	661	1.8	1	2 659
+76	268	1.8	1	0 268
+77	96	1.8	1	0 96
+78	296	1.8	1	0 296
+79	111	1.8	1	0 111
+80	380	1.8	1	0 380
+81	109	1.8	1	2 107
+82	95	1.8	1	0 95
+83	296	1.8	1	1 295
+84	108	1.8	1	0 108
+85	546	1.8	1	1 545
+86	190	1.8	1	1 189
+87	119	1.8	1	0 119
+88	325	1.8	1	1 324
+89	84	1.8	1	0 84
+90	73	1.8	1	0 73
+91	212	1.8	1	0 212
+92	147	1.8	1	0 147
+93	469	1.8	1	1 468
+94	51	1.8	1	0 51
+95	56	1.8	1	0 56
+96	40	1.8	1	0 40
+97	84	1.8	1	0 84
+98	289	1.8	1	1 288
+99	107	1.8	1	0 107
+100	146	1.8	1	0 146
+101	38	1.8	1	0 38
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_1.fastq
+=============================================
+30169100 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647696_2.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_2.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j -j 12
+Writing final adapter and quality trimmed output to SRR7647696_2_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_2.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_2.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 838.95 s (28 us/read; 2.16 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              30,169,100
+Reads with adapters:                11,671,853 (38.7%)
+Reads written (passing filters):    30,169,100 (100.0%)
+
+Total basepairs processed: 2,708,734,934 bp
+Quality-trimmed:              11,703,889 bp (0.4%)
+Total written (filtered):  2,679,170,864 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 11671853 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 27.9%
+  C: 26.2%
+  G: 22.2%
+  T: 23.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8856081	7542275.0	0	8856081
+2	1812615	1885568.8	0	1812615
+3	682378	471392.2	0	682378
+4	245012	117848.0	0	245012
+5	8208	29462.0	0	8208
+6	5541	7365.5	0	5541
+7	1658	1841.4	0	1658
+8	396	460.3	0	396
+9	314	115.1	0	160 154
+10	602	28.8	1	112 490
+11	924	7.2	1	137 787
+12	902	1.8	1	152 750
+13	671	1.8	1	147 524
+14	1571	1.8	1	149 1422
+15	1018	1.8	1	98 920
+16	3100	1.8	1	582 2518
+17	1367	1.8	1	265 1102
+18	1135	1.8	1	222 913
+19	1284	1.8	1	242 1042
+20	472	1.8	1	81 391
+21	1433	1.8	1	302 1131
+22	1311	1.8	1	254 1057
+23	891	1.8	1	202 689
+24	1051	1.8	1	261 790
+25	1224	1.8	1	401 823
+26	1161	1.8	1	376 785
+27	1407	1.8	1	425 982
+28	2152	1.8	1	663 1489
+29	1101	1.8	1	501 600
+30	1367	1.8	1	410 957
+31	1519	1.8	1	465 1054
+32	893	1.8	1	421 472
+33	2036	1.8	1	582 1454
+34	1169	1.8	1	453 716
+35	862	1.8	1	320 542
+36	905	1.8	1	329 576
+37	1784	1.8	1	535 1249
+38	1057	1.8	1	338 719
+39	860	1.8	1	308 552
+40	830	1.8	1	287 543
+41	1018	1.8	1	339 679
+42	729	1.8	1	258 471
+43	993	1.8	1	285 708
+44	603	1.8	1	207 396
+45	913	1.8	1	213 700
+46	1073	1.8	1	305 768
+47	628	1.8	1	202 426
+48	865	1.8	1	287 578
+49	713	1.8	1	248 465
+50	644	1.8	1	165 479
+51	616	1.8	1	204 412
+52	622	1.8	1	167 455
+53	527	1.8	1	172 355
+54	537	1.8	1	153 384
+55	449	1.8	1	118 331
+56	431	1.8	1	119 312
+57	418	1.8	1	114 304
+58	537	1.8	1	115 422
+59	340	1.8	1	83 257
+60	396	1.8	1	88 308
+61	336	1.8	1	78 258
+62	324	1.8	1	82 242
+63	372	1.8	1	79 293
+64	236	1.8	1	54 182
+65	259	1.8	1	42 217
+66	173	1.8	1	22 151
+67	179	1.8	1	13 166
+68	353	1.8	1	23 330
+69	206	1.8	1	14 192
+70	204	1.8	1	13 191
+71	153	1.8	1	8 145
+72	115	1.8	1	3 112
+73	290	1.8	1	4 286
+74	143	1.8	1	3 140
+75	670	1.8	1	1 669
+76	277	1.8	1	0 277
+77	93	1.8	1	0 93
+78	289	1.8	1	2 287
+79	116	1.8	1	0 116
+80	352	1.8	1	0 352
+81	98	1.8	1	3 95
+82	91	1.8	1	0 91
+83	253	1.8	1	0 253
+84	107	1.8	1	2 105
+85	551	1.8	1	0 551
+86	154	1.8	1	0 154
+87	92	1.8	1	1 91
+88	416	1.8	1	0 416
+89	75	1.8	1	0 75
+90	59	1.8	1	0 59
+91	153	1.8	1	0 153
+92	133	1.8	1	0 133
+93	445	1.8	1	1 444
+94	51	1.8	1	0 51
+95	67	1.8	1	0 67
+96	31	1.8	1	0 31
+97	82	1.8	1	0 82
+98	255	1.8	1	0 255
+99	108	1.8	1	1 107
+100	146	1.8	1	0 146
+101	32	1.8	1	0 32
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647696_2.fastq
+=============================================
+30169100 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR7647696_1_trimmed.fq and SRR7647696_2_trimmed.fq
+Now renaming the output files
+
+ORIGINAL FILE 1: >>SRR7647696_1_trimmed.fq<<	RENAMING TO:>>Bulk_B_1002_R1_trimmed.fq<<
+ORIGINAL FILE 2: >>SRR7647696_2_trimmed.fq<<	RENAMING TO:>>Bulk_B_1002_R2_trimmed.fq<<
+file_1: Bulk_B_1002_R1_trimmed.fq, file_2: Bulk_B_1002_R2_trimmed.fq
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Bulk_B_1002_R1_trimmed.fq and Bulk_B_1002_R2_trimmed.fq <<<<<
+Renaming the output files (AGAIN).
+Writing validated paired-end Read 1 reads to Bulk_B_1002_val_1.fq
+Writing validated paired-end Read 2 reads to Bulk_B_1002_val_2.fq
+
+Total number of sequences analysed: 30169100
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 11038 (0.04%)
+
+
+  >>> Now running FastQC on the validated data Bulk_B_1002_val_1.fq<<<
+
+Started analysis of Bulk_B_1002_val_1.fq
+Approx 5% complete for Bulk_B_1002_val_1.fq
+Approx 10% complete for Bulk_B_1002_val_1.fq
+Approx 15% complete for Bulk_B_1002_val_1.fq
+Approx 20% complete for Bulk_B_1002_val_1.fq
+Approx 25% complete for Bulk_B_1002_val_1.fq
+Approx 30% complete for Bulk_B_1002_val_1.fq
+Approx 35% complete for Bulk_B_1002_val_1.fq
+Approx 40% complete for Bulk_B_1002_val_1.fq
+Approx 45% complete for Bulk_B_1002_val_1.fq
+Approx 50% complete for Bulk_B_1002_val_1.fq
+Approx 55% complete for Bulk_B_1002_val_1.fq
+Approx 60% complete for Bulk_B_1002_val_1.fq
+Approx 65% complete for Bulk_B_1002_val_1.fq
+Approx 70% complete for Bulk_B_1002_val_1.fq
+Approx 75% complete for Bulk_B_1002_val_1.fq
+Approx 80% complete for Bulk_B_1002_val_1.fq
+Approx 85% complete for Bulk_B_1002_val_1.fq
+Approx 90% complete for Bulk_B_1002_val_1.fq
+Approx 95% complete for Bulk_B_1002_val_1.fq
+Analysis complete for Bulk_B_1002_val_1.fq
+
+  >>> Now running FastQC on the validated data Bulk_B_1002_val_2.fq<<<
+
+Started analysis of Bulk_B_1002_val_2.fq
+Approx 5% complete for Bulk_B_1002_val_2.fq
+Approx 10% complete for Bulk_B_1002_val_2.fq
+Approx 15% complete for Bulk_B_1002_val_2.fq
+Approx 20% complete for Bulk_B_1002_val_2.fq
+Approx 25% complete for Bulk_B_1002_val_2.fq
+Approx 30% complete for Bulk_B_1002_val_2.fq
+Approx 35% complete for Bulk_B_1002_val_2.fq
+Approx 40% complete for Bulk_B_1002_val_2.fq
+Approx 45% complete for Bulk_B_1002_val_2.fq
+Approx 50% complete for Bulk_B_1002_val_2.fq
+Approx 55% complete for Bulk_B_1002_val_2.fq
+Approx 60% complete for Bulk_B_1002_val_2.fq
+Approx 65% complete for Bulk_B_1002_val_2.fq
+Approx 70% complete for Bulk_B_1002_val_2.fq
+Approx 75% complete for Bulk_B_1002_val_2.fq
+Approx 80% complete for Bulk_B_1002_val_2.fq
+Approx 85% complete for Bulk_B_1002_val_2.fq
+Approx 90% complete for Bulk_B_1002_val_2.fq
+Approx 95% complete for Bulk_B_1002_val_2.fq
+Analysis complete for Bulk_B_1002_val_2.fq
+Deleting both intermediate output files Bulk_B_1002_R1_trimmed.fq and Bulk_B_1002_R2_trimmed.fq
+
+====================================================================================================
+
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Mem_B_1002<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	419	CTGTCTCTTATA	1000000	0.04
+Illumina	5	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 419). Second best hit was Illumina (count: 5)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647698_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647698_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_1.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_1.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 828.11 s (28 us/read; 2.15 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,739,406
+Reads with adapters:                11,651,291 (39.2%)
+Reads written (passing filters):    29,739,406 (100.0%)
+
+Total basepairs processed: 2,676,657,354 bp
+Quality-trimmed:               6,300,220 bp (0.2%)
+Total written (filtered):  2,652,827,877 bp (99.1%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 11651291 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 27.4%
+  C: 26.5%
+  G: 22.5%
+  T: 23.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8824137	7434851.5	0	8824137
+2	1823813	1858712.9	0	1823813
+3	689859	464678.2	0	689859
+4	245974	116169.6	0	245974
+5	7806	29042.4	0	7806
+6	5242	7260.6	0	5242
+7	1472	1815.1	0	1472
+8	294	453.8	0	294
+9	165	113.4	0	25 140
+10	459	28.4	1	22 437
+11	850	7.1	1	39 811
+12	946	1.8	1	119 827
+13	517	1.8	1	34 483
+14	1611	1.8	1	149 1462
+15	741	1.8	1	43 698
+16	3611	1.8	1	824 2787
+17	791	1.8	1	141 650
+18	1348	1.8	1	274 1074
+19	888	1.8	1	185 703
+20	865	1.8	1	184 681
+21	1501	1.8	1	359 1142
+22	390	1.8	1	46 344
+23	1728	1.8	1	436 1292
+24	367	1.8	1	61 306
+25	1116	1.8	1	290 826
+26	1721	1.8	1	463 1258
+27	1634	1.8	1	382 1252
+28	1383	1.8	1	357 1026
+29	1787	1.8	1	459 1328
+30	245	1.8	1	43 202
+31	1435	1.8	1	332 1103
+32	275	1.8	1	39 236
+33	1371	1.8	1	339 1032
+34	1064	1.8	1	235 829
+35	1025	1.8	1	257 768
+36	1150	1.8	1	275 875
+37	1013	1.8	1	234 779
+38	1318	1.8	1	310 1008
+39	1928	1.8	1	514 1414
+40	517	1.8	1	129 388
+41	1616	1.8	1	395 1221
+42	425	1.8	1	71 354
+43	1649	1.8	1	404 1245
+44	618	1.8	1	155 463
+45	469	1.8	1	91 378
+46	330	1.8	1	62 268
+47	350	1.8	1	57 293
+48	361	1.8	1	60 301
+49	378	1.8	1	67 311
+50	565	1.8	1	105 460
+51	533	1.8	1	111 422
+52	284	1.8	1	34 250
+53	355	1.8	1	73 282
+54	463	1.8	1	89 374
+55	275	1.8	1	41 234
+56	253	1.8	1	50 203
+57	286	1.8	1	46 240
+58	355	1.8	1	46 309
+59	215	1.8	1	44 171
+60	219	1.8	1	26 193
+61	218	1.8	1	24 194
+62	207	1.8	1	34 173
+63	216	1.8	1	26 190
+64	215	1.8	1	22 193
+65	182	1.8	1	14 168
+66	130	1.8	1	6 124
+67	160	1.8	1	10 150
+68	285	1.8	1	13 272
+69	139	1.8	1	8 131
+70	163	1.8	1	5 158
+71	98	1.8	1	2 96
+72	126	1.8	1	2 124
+73	231	1.8	1	2 229
+74	124	1.8	1	0 124
+75	498	1.8	1	0 498
+76	208	1.8	1	0 208
+77	124	1.8	1	1 123
+78	214	1.8	1	0 214
+79	109	1.8	1	0 109
+80	307	1.8	1	0 307
+81	90	1.8	1	1 89
+82	82	1.8	1	0 82
+83	215	1.8	1	0 215
+84	79	1.8	1	0 79
+85	414	1.8	1	0 414
+86	150	1.8	1	1 149
+87	82	1.8	1	0 82
+88	268	1.8	1	0 268
+89	70	1.8	1	0 70
+90	78	1.8	1	0 78
+91	143	1.8	1	0 143
+92	159	1.8	1	2 157
+93	402	1.8	1	1 401
+94	63	1.8	1	1 62
+95	67	1.8	1	0 67
+96	22	1.8	1	0 22
+97	72	1.8	1	0 72
+98	254	1.8	1	0 254
+99	127	1.8	1	0 127
+100	112	1.8	1	0 112
+101	32	1.8	1	0 32
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_1.fastq
+=============================================
+29739406 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647698_2.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_2.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j -j 12
+Writing final adapter and quality trimmed output to SRR7647698_2_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_2.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_2.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 810.96 s (27 us/read; 2.20 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              29,739,406
+Reads with adapters:                11,616,808 (39.1%)
+Reads written (passing filters):    29,739,406 (100.0%)
+
+Total basepairs processed: 2,682,118,198 bp
+Quality-trimmed:              21,457,490 bp (0.8%)
+Total written (filtered):  2,641,674,466 bp (98.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 11616808 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 27.3%
+  C: 26.1%
+  G: 22.4%
+  T: 24.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	8734954	7434851.5	0	8734954
+2	1828594	1858712.9	0	1828594
+3	693182	464678.2	0	693182
+4	235839	116169.6	0	235839
+5	10110	29042.4	0	10110
+6	6195	7260.6	0	6195
+7	2509	1815.1	0	2509
+8	1314	453.8	0	1314
+9	1072	113.4	0	847 225
+10	1366	28.4	1	562 804
+11	1849	7.1	1	647 1202
+12	1749	1.8	1	636 1113
+13	1665	1.8	1	580 1085
+14	2206	1.8	1	364 1842
+15	2176	1.8	1	419 1757
+16	4076	1.8	1	885 3191
+17	3178	1.8	1	897 2281
+18	2782	1.8	1	747 2035
+19	2897	1.8	1	847 2050
+20	1506	1.8	1	445 1061
+21	2228	1.8	1	586 1642
+22	2418	1.8	1	764 1654
+23	2229	1.8	1	766 1463
+24	2329	1.8	1	807 1522
+25	2667	1.8	1	1004 1663
+26	2684	1.8	1	1108 1576
+27	2714	1.8	1	1099 1615
+28	3799	1.8	1	1731 2068
+29	3205	1.8	1	1706 1499
+30	2455	1.8	1	1048 1407
+31	2896	1.8	1	1306 1590
+32	2507	1.8	1	1381 1126
+33	2756	1.8	1	1300 1456
+34	3181	1.8	1	1492 1689
+35	2040	1.8	1	1141 899
+36	2735	1.8	1	1274 1461
+37	2268	1.8	1	1142 1126
+38	1791	1.8	1	820 971
+39	1979	1.8	1	933 1046
+40	1789	1.8	1	893 896
+41	2068	1.8	1	945 1123
+42	1548	1.8	1	711 837
+43	1639	1.8	1	704 935
+44	1363	1.8	1	577 786
+45	1258	1.8	1	485 773
+46	1283	1.8	1	540 743
+47	1037	1.8	1	459 578
+48	961	1.8	1	402 559
+49	1060	1.8	1	458 602
+50	876	1.8	1	303 573
+51	845	1.8	1	346 499
+52	727	1.8	1	269 458
+53	636	1.8	1	265 371
+54	607	1.8	1	228 379
+55	573	1.8	1	241 332
+56	554	1.8	1	196 358
+57	591	1.8	1	174 417
+58	573	1.8	1	165 408
+59	390	1.8	1	139 251
+60	470	1.8	1	152 318
+61	373	1.8	1	112 261
+62	338	1.8	1	98 240
+63	402	1.8	1	103 299
+64	336	1.8	1	103 233
+65	261	1.8	1	59 202
+66	191	1.8	1	26 165
+67	202	1.8	1	24 178
+68	307	1.8	1	26 281
+69	179	1.8	1	17 162
+70	219	1.8	1	23 196
+71	122	1.8	1	11 111
+72	146	1.8	1	6 140
+73	240	1.8	1	5 235
+74	138	1.8	1	2 136
+75	519	1.8	1	1 518
+76	182	1.8	1	1 181
+77	97	1.8	1	1 96
+78	204	1.8	1	1 203
+79	135	1.8	1	1 134
+80	284	1.8	1	0 284
+81	72	1.8	1	0 72
+82	109	1.8	1	0 109
+83	210	1.8	1	0 210
+84	112	1.8	1	1 111
+85	389	1.8	1	1 388
+86	128	1.8	1	1 127
+87	102	1.8	1	1 101
+88	312	1.8	1	1 311
+89	90	1.8	1	0 90
+90	75	1.8	1	0 75
+91	154	1.8	1	0 154
+92	198	1.8	1	0 198
+93	367	1.8	1	2 365
+94	49	1.8	1	0 49
+95	51	1.8	1	0 51
+96	46	1.8	1	0 46
+97	74	1.8	1	0 74
+98	201	1.8	1	2 199
+99	91	1.8	1	1 90
+100	122	1.8	1	0 122
+101	33	1.8	1	0 33
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647698_2.fastq
+=============================================
+29739406 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR7647698_1_trimmed.fq and SRR7647698_2_trimmed.fq
+Now renaming the output files
+
+ORIGINAL FILE 1: >>SRR7647698_1_trimmed.fq<<	RENAMING TO:>>Mem_B_1002_R1_trimmed.fq<<
+ORIGINAL FILE 2: >>SRR7647698_2_trimmed.fq<<	RENAMING TO:>>Mem_B_1002_R2_trimmed.fq<<
+file_1: Mem_B_1002_R1_trimmed.fq, file_2: Mem_B_1002_R2_trimmed.fq
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Mem_B_1002_R1_trimmed.fq and Mem_B_1002_R2_trimmed.fq <<<<<
+Renaming the output files (AGAIN).
+Writing validated paired-end Read 1 reads to Mem_B_1002_val_1.fq
+Writing validated paired-end Read 2 reads to Mem_B_1002_val_2.fq
+
+Total number of sequences analysed: 29739406
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 11372 (0.04%)
+
+
+  >>> Now running FastQC on the validated data Mem_B_1002_val_1.fq<<<
+
+Started analysis of Mem_B_1002_val_1.fq
+Approx 5% complete for Mem_B_1002_val_1.fq
+Approx 10% complete for Mem_B_1002_val_1.fq
+Approx 15% complete for Mem_B_1002_val_1.fq
+Approx 20% complete for Mem_B_1002_val_1.fq
+Approx 25% complete for Mem_B_1002_val_1.fq
+Approx 30% complete for Mem_B_1002_val_1.fq
+Approx 35% complete for Mem_B_1002_val_1.fq
+Approx 40% complete for Mem_B_1002_val_1.fq
+Approx 45% complete for Mem_B_1002_val_1.fq
+Approx 50% complete for Mem_B_1002_val_1.fq
+Approx 55% complete for Mem_B_1002_val_1.fq
+Approx 60% complete for Mem_B_1002_val_1.fq
+Approx 65% complete for Mem_B_1002_val_1.fq
+Approx 70% complete for Mem_B_1002_val_1.fq
+Approx 75% complete for Mem_B_1002_val_1.fq
+Approx 80% complete for Mem_B_1002_val_1.fq
+Approx 85% complete for Mem_B_1002_val_1.fq
+Approx 90% complete for Mem_B_1002_val_1.fq
+Approx 95% complete for Mem_B_1002_val_1.fq
+Analysis complete for Mem_B_1002_val_1.fq
+
+  >>> Now running FastQC on the validated data Mem_B_1002_val_2.fq<<<
+
+Started analysis of Mem_B_1002_val_2.fq
+Approx 5% complete for Mem_B_1002_val_2.fq
+Approx 10% complete for Mem_B_1002_val_2.fq
+Approx 15% complete for Mem_B_1002_val_2.fq
+Approx 20% complete for Mem_B_1002_val_2.fq
+Approx 25% complete for Mem_B_1002_val_2.fq
+Approx 30% complete for Mem_B_1002_val_2.fq
+Approx 35% complete for Mem_B_1002_val_2.fq
+Approx 40% complete for Mem_B_1002_val_2.fq
+Approx 45% complete for Mem_B_1002_val_2.fq
+Approx 50% complete for Mem_B_1002_val_2.fq
+Approx 55% complete for Mem_B_1002_val_2.fq
+Approx 60% complete for Mem_B_1002_val_2.fq
+Approx 65% complete for Mem_B_1002_val_2.fq
+Approx 70% complete for Mem_B_1002_val_2.fq
+Approx 75% complete for Mem_B_1002_val_2.fq
+Approx 80% complete for Mem_B_1002_val_2.fq
+Approx 85% complete for Mem_B_1002_val_2.fq
+Approx 90% complete for Mem_B_1002_val_2.fq
+Approx 95% complete for Mem_B_1002_val_2.fq
+Analysis complete for Mem_B_1002_val_2.fq
+Deleting both intermediate output files Mem_B_1002_R1_trimmed.fq and Mem_B_1002_R2_trimmed.fq
+
+====================================================================================================
+
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Naive_B_1002<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	437	CTGTCTCTTATA	1000000	0.04
+Illumina	9	AGATCGGAAGAGC	1000000	0.00
+smallRNA	2	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 437). Second best hit was Illumina (count: 9)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647700_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647700_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_1.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_1.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 961.60 s (27 us/read; 2.23 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              35,817,572
+Reads with adapters:                14,089,530 (39.3%)
+Reads written (passing filters):    35,817,572 (100.0%)
+
+Total basepairs processed: 3,184,365,173 bp
+Quality-trimmed:               7,338,923 bp (0.2%)
+Total written (filtered):  3,155,764,185 bp (99.1%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 14089530 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 28.1%
+  C: 26.3%
+  G: 22.0%
+  T: 23.5%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	10727323	8954393.0	0	10727323
+2	2154511	2238598.2	0	2154511
+3	817986	559649.6	0	817986
+4	302921	139912.4	0	302921
+5	9599	34978.1	0	9599
+6	7105	8744.5	0	7105
+7	1963	2186.1	0	1963
+8	406	546.5	0	406
+9	242	136.6	0	44 198
+10	595	34.2	1	29 566
+11	985	8.5	1	37 948
+12	1232	2.1	1	156 1076
+13	625	2.1	1	47 578
+14	2031	2.1	1	183 1848
+15	945	2.1	1	53 892
+16	4626	2.1	1	1120 3506
+17	979	2.1	1	161 818
+18	1648	2.1	1	298 1350
+19	1102	2.1	1	227 875
+20	1129	2.1	1	256 873
+21	2021	2.1	1	505 1516
+22	511	2.1	1	56 455
+23	2257	2.1	1	600 1657
+24	477	2.1	1	91 386
+25	1548	2.1	1	432 1116
+26	2155	2.1	1	535 1620
+27	2222	2.1	1	603 1619
+28	1829	2.1	1	511 1318
+29	2283	2.1	1	633 1650
+30	342	2.1	1	59 283
+31	1824	2.1	1	432 1392
+32	318	2.1	1	54 264
+33	1799	2.1	1	469 1330
+34	1192	2.1	1	277 915
+35	1437	2.1	1	342 1095
+36	1640	2.1	1	404 1236
+37	1202	2.1	1	261 941
+38	1734	2.1	1	404 1330
+39	2443	2.1	1	627 1816
+40	581	2.1	1	120 461
+41	2113	2.1	1	480 1633
+42	544	2.1	1	119 425
+43	2427	2.1	1	591 1836
+44	762	2.1	1	203 559
+45	550	2.1	1	112 438
+46	375	2.1	1	71 304
+47	512	2.1	1	80 432
+48	496	2.1	1	104 392
+49	583	2.1	1	113 470
+50	762	2.1	1	133 629
+51	774	2.1	1	172 602
+52	377	2.1	1	53 324
+53	454	2.1	1	83 371
+54	603	2.1	1	123 480
+55	358	2.1	1	52 306
+56	335	2.1	1	50 285
+57	335	2.1	1	43 292
+58	448	2.1	1	63 385
+59	291	2.1	1	61 230
+60	310	2.1	1	32 278
+61	281	2.1	1	39 242
+62	198	2.1	1	36 162
+63	311	2.1	1	25 286
+64	261	2.1	1	25 236
+65	196	2.1	1	19 177
+66	159	2.1	1	10 149
+67	217	2.1	1	17 200
+68	342	2.1	1	8 334
+69	184	2.1	1	20 164
+70	224	2.1	1	14 210
+71	123	2.1	1	5 118
+72	122	2.1	1	0 122
+73	284	2.1	1	4 280
+74	135	2.1	1	0 135
+75	553	2.1	1	0 553
+76	240	2.1	1	0 240
+77	91	2.1	1	0 91
+78	262	2.1	1	2 260
+79	111	2.1	1	0 111
+80	373	2.1	1	0 373
+81	99	2.1	1	1 98
+82	102	2.1	1	0 102
+83	280	2.1	1	1 279
+84	128	2.1	1	1 127
+85	500	2.1	1	1 499
+86	164	2.1	1	0 164
+87	93	2.1	1	1 92
+88	360	2.1	1	0 360
+89	110	2.1	1	0 110
+90	105	2.1	1	0 105
+91	231	2.1	1	1 230
+92	185	2.1	1	0 185
+93	453	2.1	1	0 453
+94	62	2.1	1	0 62
+95	79	2.1	1	0 79
+96	33	2.1	1	0 33
+97	102	2.1	1	2 100
+98	321	2.1	1	0 321
+99	125	2.1	1	0 125
+100	112	2.1	1	0 112
+101	42	2.1	1	0 42
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_1.fastq
+=============================================
+35817572 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647700_2.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_2.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j -j 12
+Writing final adapter and quality trimmed output to SRR7647700_2_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_2.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_2.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 978.88 s (27 us/read; 2.20 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              35,817,572
+Reads with adapters:                14,060,416 (39.3%)
+Reads written (passing filters):    35,817,572 (100.0%)
+
+Total basepairs processed: 3,191,611,079 bp
+Quality-trimmed:              24,343,253 bp (0.8%)
+Total written (filtered):  3,144,081,123 bp (98.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 14060416 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 28.1%
+  C: 25.9%
+  G: 22.0%
+  T: 24.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	10625010	8954393.0	0	10625010
+2	2163092	2238598.2	0	2163092
+3	820035	559649.6	0	820035
+4	291496	139912.4	0	291496
+5	12444	34978.1	0	12444
+6	8276	8744.5	0	8276
+7	3196	2186.1	0	3196
+8	1737	546.5	0	1737
+9	1442	136.6	0	1181 261
+10	1794	34.2	1	704 1090
+11	2235	8.5	1	761 1474
+12	2251	2.1	1	831 1420
+13	2076	2.1	1	672 1404
+14	2908	2.1	1	543 2365
+15	2701	2.1	1	494 2207
+16	5352	2.1	1	1211 4141
+17	4246	2.1	1	1149 3097
+18	3590	2.1	1	989 2601
+19	3727	2.1	1	1074 2653
+20	1974	2.1	1	572 1402
+21	2863	2.1	1	749 2114
+22	3139	2.1	1	856 2283
+23	2685	2.1	1	912 1773
+24	2955	2.1	1	1021 1934
+25	3648	2.1	1	1441 2207
+26	3461	2.1	1	1426 2035
+27	3482	2.1	1	1395 2087
+28	5030	2.1	1	2214 2816
+29	3980	2.1	1	2116 1864
+30	3200	2.1	1	1362 1838
+31	3797	2.1	1	1670 2127
+32	3182	2.1	1	1778 1404
+33	3548	2.1	1	1644 1904
+34	4050	2.1	1	1833 2217
+35	2860	2.1	1	1491 1369
+36	3771	2.1	1	1720 2051
+37	2596	2.1	1	1391 1205
+38	3240	2.1	1	1436 1804
+39	2253	2.1	1	1147 1106
+40	2907	2.1	1	1403 1504
+41	2335	2.1	1	1048 1287
+42	2112	2.1	1	903 1209
+43	2230	2.1	1	983 1247
+44	2060	2.1	1	848 1212
+45	1785	2.1	1	760 1025
+46	1506	2.1	1	624 882
+47	1398	2.1	1	577 821
+48	1152	2.1	1	472 680
+49	1256	2.1	1	548 708
+50	1125	2.1	1	422 703
+51	1098	2.1	1	441 657
+52	934	2.1	1	375 559
+53	911	2.1	1	359 552
+54	823	2.1	1	296 527
+55	749	2.1	1	289 460
+56	715	2.1	1	258 457
+57	710	2.1	1	259 451
+58	733	2.1	1	234 499
+59	577	2.1	1	197 380
+60	593	2.1	1	176 417
+61	495	2.1	1	162 333
+62	404	2.1	1	132 272
+63	457	2.1	1	124 333
+64	392	2.1	1	106 286
+65	302	2.1	1	87 215
+66	253	2.1	1	51 202
+67	235	2.1	1	30 205
+68	323	2.1	1	22 301
+69	198	2.1	1	22 176
+70	227	2.1	1	20 207
+71	182	2.1	1	21 161
+72	169	2.1	1	2 167
+73	276	2.1	1	3 273
+74	169	2.1	1	2 167
+75	614	2.1	1	0 614
+76	256	2.1	1	0 256
+77	114	2.1	1	1 113
+78	287	2.1	1	4 283
+79	129	2.1	1	1 128
+80	360	2.1	1	0 360
+81	113	2.1	1	0 113
+82	109	2.1	1	0 109
+83	283	2.1	1	1 282
+84	122	2.1	1	0 122
+85	526	2.1	1	2 524
+86	128	2.1	1	1 127
+87	117	2.1	1	0 117
+88	345	2.1	1	3 342
+89	99	2.1	1	0 99
+90	104	2.1	1	0 104
+91	184	2.1	1	0 184
+92	165	2.1	1	0 165
+93	413	2.1	1	0 413
+94	55	2.1	1	0 55
+95	64	2.1	1	0 64
+96	41	2.1	1	0 41
+97	91	2.1	1	0 91
+98	280	2.1	1	0 280
+99	118	2.1	1	1 117
+100	112	2.1	1	0 112
+101	74	2.1	1	0 74
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647700_2.fastq
+=============================================
+35817572 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR7647700_1_trimmed.fq and SRR7647700_2_trimmed.fq
+Now renaming the output files
+
+ORIGINAL FILE 1: >>SRR7647700_1_trimmed.fq<<	RENAMING TO:>>Naive_B_1002_R1_trimmed.fq<<
+ORIGINAL FILE 2: >>SRR7647700_2_trimmed.fq<<	RENAMING TO:>>Naive_B_1002_R2_trimmed.fq<<
+file_1: Naive_B_1002_R1_trimmed.fq, file_2: Naive_B_1002_R2_trimmed.fq
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Naive_B_1002_R1_trimmed.fq and Naive_B_1002_R2_trimmed.fq <<<<<
+Renaming the output files (AGAIN).
+Writing validated paired-end Read 1 reads to Naive_B_1002_val_1.fq
+Writing validated paired-end Read 2 reads to Naive_B_1002_val_2.fq
+
+Total number of sequences analysed: 35817572
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 14001 (0.04%)
+
+
+  >>> Now running FastQC on the validated data Naive_B_1002_val_1.fq<<<
+
+Started analysis of Naive_B_1002_val_1.fq
+Approx 5% complete for Naive_B_1002_val_1.fq
+Approx 10% complete for Naive_B_1002_val_1.fq
+Approx 15% complete for Naive_B_1002_val_1.fq
+Approx 20% complete for Naive_B_1002_val_1.fq
+Approx 25% complete for Naive_B_1002_val_1.fq
+Approx 30% complete for Naive_B_1002_val_1.fq
+Approx 35% complete for Naive_B_1002_val_1.fq
+Approx 40% complete for Naive_B_1002_val_1.fq
+Approx 45% complete for Naive_B_1002_val_1.fq
+Approx 50% complete for Naive_B_1002_val_1.fq
+Approx 55% complete for Naive_B_1002_val_1.fq
+Approx 60% complete for Naive_B_1002_val_1.fq
+Approx 65% complete for Naive_B_1002_val_1.fq
+Approx 70% complete for Naive_B_1002_val_1.fq
+Approx 75% complete for Naive_B_1002_val_1.fq
+Approx 80% complete for Naive_B_1002_val_1.fq
+Approx 85% complete for Naive_B_1002_val_1.fq
+Approx 90% complete for Naive_B_1002_val_1.fq
+Approx 95% complete for Naive_B_1002_val_1.fq
+Analysis complete for Naive_B_1002_val_1.fq
+
+  >>> Now running FastQC on the validated data Naive_B_1002_val_2.fq<<<
+
+Started analysis of Naive_B_1002_val_2.fq
+Approx 5% complete for Naive_B_1002_val_2.fq
+Approx 10% complete for Naive_B_1002_val_2.fq
+Approx 15% complete for Naive_B_1002_val_2.fq
+Approx 20% complete for Naive_B_1002_val_2.fq
+Approx 25% complete for Naive_B_1002_val_2.fq
+Approx 30% complete for Naive_B_1002_val_2.fq
+Approx 35% complete for Naive_B_1002_val_2.fq
+Approx 40% complete for Naive_B_1002_val_2.fq
+Approx 45% complete for Naive_B_1002_val_2.fq
+Approx 50% complete for Naive_B_1002_val_2.fq
+Approx 55% complete for Naive_B_1002_val_2.fq
+Approx 60% complete for Naive_B_1002_val_2.fq
+Approx 65% complete for Naive_B_1002_val_2.fq
+Approx 70% complete for Naive_B_1002_val_2.fq
+Approx 75% complete for Naive_B_1002_val_2.fq
+Approx 80% complete for Naive_B_1002_val_2.fq
+Approx 85% complete for Naive_B_1002_val_2.fq
+Approx 90% complete for Naive_B_1002_val_2.fq
+Approx 95% complete for Naive_B_1002_val_2.fq
+Analysis complete for Naive_B_1002_val_2.fq
+Deleting both intermediate output files Naive_B_1002_R1_trimmed.fq and Naive_B_1002_R2_trimmed.fq
+
+====================================================================================================
+
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Bulk_B_1003<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	562	CTGTCTCTTATA	1000000	0.06
+Illumina	6	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 562). Second best hit was Illumina (count: 6)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647731_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647731_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_1.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_1.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 1454.83 s (27 us/read; 2.23 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              53,957,095
+Reads with adapters:                21,191,531 (39.3%)
+Reads written (passing filters):    53,957,095 (100.0%)
+
+Total basepairs processed: 4,781,200,259 bp
+Quality-trimmed:              19,377,130 bp (0.4%)
+Total written (filtered):  4,727,820,384 bp (98.9%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 21191531 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 31.7%
+  C: 24.3%
+  G: 19.1%
+  T: 25.0%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16007605	13489273.8	0	16007605
+2	3184913	3372318.4	0	3184913
+3	1282985	843079.6	0	1282985
+4	493151	210769.9	0	493151
+5	22998	52692.5	0	22998
+6	16628	13173.1	0	16628
+7	8010	3293.3	0	8010
+8	4992	823.3	0	4992
+9	984	205.8	0	411 573
+10	2233	51.5	1	205 2028
+11	2722	12.9	1	312 2410
+12	3339	3.2	1	561 2778
+13	2460	3.2	1	301 2159
+14	4964	3.2	1	526 4438
+15	4883	3.2	1	499 4384
+16	10297	3.2	1	1842 8455
+17	5235	3.2	1	878 4357
+18	6947	3.2	1	1177 5770
+19	5686	3.2	1	1124 4562
+20	3206	3.2	1	653 2553
+21	4112	3.2	1	799 3313
+22	2291	3.2	1	461 1830
+23	4851	3.2	1	1227 3624
+24	2302	3.2	1	557 1745
+25	4516	3.2	1	1206 3310
+26	5842	3.2	1	1538 4304
+27	6006	3.2	1	1633 4373
+28	5831	3.2	1	1757 4074
+29	6171	3.2	1	1734 4437
+30	1484	3.2	1	370 1114
+31	3647	3.2	1	942 2705
+32	1541	3.2	1	371 1170
+33	3770	3.2	1	1039 2731
+34	2681	3.2	1	674 2007
+35	3898	3.2	1	1043 2855
+36	2816	3.2	1	707 2109
+37	3843	3.2	1	979 2864
+38	2817	3.2	1	675 2142
+39	3358	3.2	1	847 2511
+40	3581	3.2	1	884 2697
+41	2001	3.2	1	464 1537
+42	2241	3.2	1	554 1687
+43	3702	3.2	1	869 2833
+44	2213	3.2	1	611 1602
+45	1609	3.2	1	390 1219
+46	1106	3.2	1	267 839
+47	1100	3.2	1	250 850
+48	1626	3.2	1	338 1288
+49	1398	3.2	1	333 1065
+50	1407	3.2	1	279 1128
+51	1796	3.2	1	437 1359
+52	1188	3.2	1	246 942
+53	1031	3.2	1	200 831
+54	1059	3.2	1	247 812
+55	1094	3.2	1	229 865
+56	804	3.2	1	165 639
+57	715	3.2	1	106 609
+58	998	3.2	1	210 788
+59	827	3.2	1	173 654
+60	573	3.2	1	95 478
+61	602	3.2	1	121 481
+62	780	3.2	1	156 624
+63	695	3.2	1	77 618
+64	436	3.2	1	79 357
+65	379	3.2	1	49 330
+66	378	3.2	1	53 325
+67	450	3.2	1	42 408
+68	474	3.2	1	27 447
+69	263	3.2	1	28 235
+70	275	3.2	1	27 248
+71	162	3.2	1	6 156
+72	234	3.2	1	4 230
+73	483	3.2	1	1 482
+74	311	3.2	1	4 307
+75	1034	3.2	1	5 1029
+76	355	3.2	1	11 344
+77	144	3.2	1	6 138
+78	391	3.2	1	16 375
+79	201	3.2	1	5 196
+80	639	3.2	1	3 636
+81	170	3.2	1	2 168
+82	131	3.2	1	1 130
+83	278	3.2	1	9 269
+84	251	3.2	1	6 245
+85	885	3.2	1	1 884
+86	193	3.2	1	4 189
+87	129	3.2	1	2 127
+88	569	3.2	1	21 548
+89	60	3.2	1	1 59
+90	127	3.2	1	2 125
+91	117	3.2	1	2 115
+92	178	3.2	1	7 171
+93	489	3.2	1	14 475
+94	57	3.2	1	0 57
+95	94	3.2	1	0 94
+96	79	3.2	1	2 77
+97	116	3.2	1	7 109
+98	458	3.2	1	28 430
+99	113	3.2	1	5 108
+100	227	3.2	1	0 227
+101	40	3.2	1	3 37
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_1.fastq
+=============================================
+53957095 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647731_2.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_2.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j -j 12
+Writing final adapter and quality trimmed output to SRR7647731_2_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_2.fastq <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.18 with Python 3.6.15
+Command line parameters: -j 12 -e 0.1 -q 20 -O 1 -a CTGTCTCTTATA /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_2.fastq
+Processing reads on 12 cores in single-end mode ...
+Finished in 1444.80 s (27 us/read; 2.24 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              53,957,095
+Reads with adapters:                21,333,155 (39.5%)
+Reads written (passing filters):    53,957,095 (100.0%)
+
+Total basepairs processed: 4,780,900,517 bp
+Quality-trimmed:              45,639,174 bp (1.0%)
+Total written (filtered):  4,701,086,968 bp (98.3%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 21333155 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-12 bp: 1
+
+Bases preceding removed adapters:
+  A: 32.2%
+  C: 24.2%
+  G: 18.5%
+  T: 25.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	16061196	13489273.8	0	16061196
+2	3270470	3372318.4	0	3270470
+3	1247919	843079.6	0	1247919
+4	531360	210769.9	0	531360
+5	18839	52692.5	0	18839
+6	16692	13173.1	0	16692
+7	5837	3293.3	0	5837
+8	3286	823.3	0	3286
+9	2466	205.8	0	1990 476
+10	2748	51.5	1	1159 1589
+11	3706	12.9	1	1326 2380
+12	3366	3.2	1	1231 2135
+13	3654	3.2	1	1322 2332
+14	4407	3.2	1	675 3732
+15	4346	3.2	1	782 3564
+16	8896	3.2	1	1840 7056
+17	6765	3.2	1	1746 5019
+18	5586	3.2	1	1442 4144
+19	5672	3.2	1	1561 4111
+20	3175	3.2	1	852 2323
+21	4560	3.2	1	1124 3436
+22	4869	3.2	1	1264 3605
+23	4128	3.2	1	1410 2718
+24	4617	3.2	1	1652 2965
+25	4723	3.2	1	1814 2909
+26	5216	3.2	1	2268 2948
+27	5393	3.2	1	2229 3164
+28	7546	3.2	1	3364 4182
+29	6082	3.2	1	3414 2668
+30	4239	3.2	1	1877 2362
+31	5101	3.2	1	2211 2890
+32	4544	3.2	1	2602 1942
+33	4494	3.2	1	2087 2407
+34	3788	3.2	1	2040 1748
+35	3652	3.2	1	1612 2040
+36	4482	3.2	1	1885 2597
+37	3748	3.2	1	1712 2036
+38	3169	3.2	1	1360 1809
+39	3095	3.2	1	1305 1790
+40	2022	3.2	1	1045 977
+41	1867	3.2	1	944 923
+42	2148	3.2	1	869 1279
+43	1975	3.2	1	757 1218
+44	1509	3.2	1	644 865
+45	2140	3.2	1	647 1493
+46	1709	3.2	1	613 1096
+47	1128	3.2	1	423 705
+48	1061	3.2	1	407 654
+49	1024	3.2	1	408 616
+50	1013	3.2	1	312 701
+51	661	3.2	1	266 395
+52	745	3.2	1	265 480
+53	683	3.2	1	230 453
+54	728	3.2	1	230 498
+55	542	3.2	1	145 397
+56	589	3.2	1	146 443
+57	612	3.2	1	151 461
+58	491	3.2	1	111 380
+59	366	3.2	1	69 297
+60	453	3.2	1	88 365
+61	317	3.2	1	48 269
+62	331	3.2	1	69 262
+63	517	3.2	1	71 446
+64	231	3.2	1	42 189
+65	253	3.2	1	31 222
+66	199	3.2	1	29 170
+67	368	3.2	1	10 358
+68	402	3.2	1	13 389
+69	185	3.2	1	13 172
+70	271	3.2	1	10 261
+71	188	3.2	1	19 169
+72	221	3.2	1	3 218
+73	479	3.2	1	7 472
+74	261	3.2	1	0 261
+75	1139	3.2	1	3 1136
+76	371	3.2	1	10 361
+77	152	3.2	1	6 146
+78	397	3.2	1	15 382
+79	175	3.2	1	2 173
+80	605	3.2	1	2 603
+81	180	3.2	1	5 175
+82	126	3.2	1	0 126
+83	249	3.2	1	10 239
+84	224	3.2	1	14 210
+85	904	3.2	1	0 904
+86	169	3.2	1	8 161
+87	118	3.2	1	3 115
+88	629	3.2	1	31 598
+89	53	3.2	1	1 52
+90	143	3.2	1	2 141
+91	118	3.2	1	0 118
+92	177	3.2	1	2 175
+93	463	3.2	1	8 455
+94	54	3.2	1	0 54
+95	108	3.2	1	0 108
+96	64	3.2	1	1 63
+97	94	3.2	1	2 92
+98	554	3.2	1	21 533
+99	94	3.2	1	3 91
+100	249	3.2	1	0 249
+101	25	3.2	1	1 24
+
+
+RUN STATISTICS FOR INPUT FILE: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647731_2.fastq
+=============================================
+53957095 sequences processed in total
+The length threshold of paired-end sequences gets evaluated later on (in the validation step)
+
+Validate paired-end files SRR7647731_1_trimmed.fq and SRR7647731_2_trimmed.fq
+Now renaming the output files
+
+ORIGINAL FILE 1: >>SRR7647731_1_trimmed.fq<<	RENAMING TO:>>Bulk_B_1003_R1_trimmed.fq<<
+ORIGINAL FILE 2: >>SRR7647731_2_trimmed.fq<<	RENAMING TO:>>Bulk_B_1003_R2_trimmed.fq<<
+file_1: Bulk_B_1003_R1_trimmed.fq, file_2: Bulk_B_1003_R2_trimmed.fq
+
+
+>>>>> Now validing the length of the 2 paired-end infiles: Bulk_B_1003_R1_trimmed.fq and Bulk_B_1003_R2_trimmed.fq <<<<<
+Renaming the output files (AGAIN).
+Writing validated paired-end Read 1 reads to Bulk_B_1003_val_1.fq
+Writing validated paired-end Read 2 reads to Bulk_B_1003_val_2.fq
+
+Total number of sequences analysed: 53957095
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 18490 (0.03%)
+
+
+  >>> Now running FastQC on the validated data Bulk_B_1003_val_1.fq<<<
+
+Started analysis of Bulk_B_1003_val_1.fq
+Approx 5% complete for Bulk_B_1003_val_1.fq
+Approx 10% complete for Bulk_B_1003_val_1.fq
+Approx 15% complete for Bulk_B_1003_val_1.fq
+Approx 20% complete for Bulk_B_1003_val_1.fq
+Approx 25% complete for Bulk_B_1003_val_1.fq
+Approx 30% complete for Bulk_B_1003_val_1.fq
+Approx 35% complete for Bulk_B_1003_val_1.fq
+Approx 40% complete for Bulk_B_1003_val_1.fq
+Approx 45% complete for Bulk_B_1003_val_1.fq
+Approx 50% complete for Bulk_B_1003_val_1.fq
+Approx 55% complete for Bulk_B_1003_val_1.fq
+Approx 60% complete for Bulk_B_1003_val_1.fq
+Approx 65% complete for Bulk_B_1003_val_1.fq
+Approx 70% complete for Bulk_B_1003_val_1.fq
+Approx 75% complete for Bulk_B_1003_val_1.fq
+Approx 80% complete for Bulk_B_1003_val_1.fq
+Approx 85% complete for Bulk_B_1003_val_1.fq
+Approx 90% complete for Bulk_B_1003_val_1.fq
+Approx 95% complete for Bulk_B_1003_val_1.fq
+Analysis complete for Bulk_B_1003_val_1.fq
+
+  >>> Now running FastQC on the validated data Bulk_B_1003_val_2.fq<<<
+
+Started analysis of Bulk_B_1003_val_2.fq
+Approx 5% complete for Bulk_B_1003_val_2.fq
+Approx 10% complete for Bulk_B_1003_val_2.fq
+Approx 15% complete for Bulk_B_1003_val_2.fq
+Approx 20% complete for Bulk_B_1003_val_2.fq
+Approx 25% complete for Bulk_B_1003_val_2.fq
+Approx 30% complete for Bulk_B_1003_val_2.fq
+Approx 35% complete for Bulk_B_1003_val_2.fq
+Approx 40% complete for Bulk_B_1003_val_2.fq
+Approx 45% complete for Bulk_B_1003_val_2.fq
+Approx 50% complete for Bulk_B_1003_val_2.fq
+Approx 55% complete for Bulk_B_1003_val_2.fq
+Approx 60% complete for Bulk_B_1003_val_2.fq
+Approx 65% complete for Bulk_B_1003_val_2.fq
+Approx 70% complete for Bulk_B_1003_val_2.fq
+Approx 75% complete for Bulk_B_1003_val_2.fq
+Approx 80% complete for Bulk_B_1003_val_2.fq
+Approx 85% complete for Bulk_B_1003_val_2.fq
+Approx 90% complete for Bulk_B_1003_val_2.fq
+Approx 95% complete for Bulk_B_1003_val_2.fq
+Analysis complete for Bulk_B_1003_val_2.fq
+Deleting both intermediate output files Bulk_B_1003_R1_trimmed.fq and Bulk_B_1003_R2_trimmed.fq
+
+====================================================================================================
+
+Using an excessive number of cores has a diminishing return! It is recommended not to exceed 8 cores per trimming process (you asked for 12 cores). Please consider re-specifying
+Path to Cutadapt set as: 'cutadapt' (default)
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+Cutadapt version: 1.18
+Could not detect version of Python used by Cutadapt from the first line of Cutadapt (but found this: >>>#!/bin/sh<<<)
+Letting the (modified) Cutadapt deal with the Python version instead
+pigz 2.6
+Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 12 cores
+
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Output will be written into the directory: /gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/
+Using user-specified basename (>>Bulk_B_1004<<) instead of deriving the filename from the input file(s)
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647767_1.fastq <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Nextera	172	CTGTCTCTTATA	1000000	0.02
+Illumina	6	AGATCGGAAGAGC	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Nextera adapter for trimming (count: 172). Second best hit was Illumina (count: 6)
+
+Writing report to '/gpfs52/data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/trimmed_reads/SRR7647767_1.fastq_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647767_1.fastq
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 1.18
+Python version: could not detect
+Number of cores used for trimming: 12
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'CTGTCTCTTATA' (Nextera Transposase sequence; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '--outdir /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/processing_results/fastQC'
+
+Cutadapt seems to be reasonably up-to-date. Setting -j 12
+Writing final adapter and quality trimmed output to SRR7647767_1_trimmed.fq
+
+
+  >>> Now performing quality (cutoff '-q 20') and adapter trimming in a single pass for the adapter sequence: 'CTGTCTCTTATA' from file /data/hodges_lab/public_data/immune-cell_RNA-seq/Calderon_2019/fastq/SRR7647767_1.fastq <<< 
+10000000 sequences processed
+slurmstepd: error: *** JOB 39145478 ON cn367 CANCELLED AT 2022-03-23T16:48:02 DUE TO TIME LIMIT ***
