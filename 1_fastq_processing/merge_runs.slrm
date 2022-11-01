@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --mail-user=tyler.j.hansen@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1                                                                                                
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=04:00:00
+#SBATCH --mem=32G
+#######################################################                                                                                                                 
+#Tyler Hansen - 2021-01-26
+# For two of the samples, we had to run it on the sequencer twice. This script merges these two bam files and creates an index. 
+#######################################################
+
+module restore sam
+cd /data/hodges_lab/ATAC-STARR_V2/data/bams/pos-sorted
+
+for i in filtered no_SeqDup unique
+do
+    for j in GM12878inLCL8664_RNA_Rep1 LCL8664inGM12878_RNA_Rep2
+    do
+        samtools merge -@8 - ${j}_run1.${i}.pos-sorted.bam ${j}_run2.${i}.pos-sorted.bam | samtools sort -@8  - > ${j}.${i}.pos-sorted.bam
+        samtools index -@8 ${j}.${i}.pos-sorted.bam ${j}.${i}.pos-sorted.bam.bai
+        samtools sort -@8 -n ${j}.${i}.pos-sorted.bam > ../n-sorted/${j}.${i}.n-sorted.bam
+    done
+done
+
