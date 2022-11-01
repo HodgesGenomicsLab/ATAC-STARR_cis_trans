@@ -15,7 +15,7 @@ This section contains code for calling all of our region sets, including the cis
 - HH-vs-MM.ipynb details how we called conserved active and species-specific active regions.
 - cis-or-trans.ipynb details how we called cis effects and trans effects as well as the cis only, trans only, and cis & trans groups.
 - shuffle_analysis.ipynb details the observed vs. expected overlap analyses.
-- activity_bigwigs.ipynb details how we created the ATAC-STARR-seq bigwigs. This uses a script from the ATAC-STARR-seq github: generate_ATAC-STARR_bigwig.py.
+- activity_bigwigs.ipynb details how we created the ATAC-STARR-seq bigwigs.
 
 ## Functional Characterization of Cis and Trans Effects
 This section contains the code used for the "functional" analyses described in the manuscript. 
