@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10728132.svg)](https://doi.org/10.5281/zenodo.10728132)
 # Divergence in both cis and trans drives human gene regulatory evolution  
 This is the code repository for the analyses performed in Hansen, T., Fong, S., et al. bioRxiv 2022. Any questions or comments, please email Emily Hodges at emily.hodges(at)vanderbilt.edu. 
 
