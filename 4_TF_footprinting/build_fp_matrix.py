@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# sarahfong
+# ATAC-STARR-seq and shuffled elements need to be intersected with FP calls from TOBIAS. 
+# This script intersects elements with footprints. 
+# note - need to use rhemac10 ATAC-STARR-seq elements/shuffle coordinates to intersect w/ rhemac10 footprints (which are in rhemac10 coordinates)
 
 
 from functools import partial
@@ -29,7 +32,10 @@ name = "/data/hodges_lab/ATAC-STARR_B-cells/bin_human-evolution/config"
 config, configfile_name = crw.read_config(name)
 
 SHUF = config["SHUFFLES"]["shuf-all"]
+SHUF_RHEMAC10 = config["CIS_TRANS_LIFTOVER"]["shuf-all"]
+
 REGIONS = config["CIS_TRANS"]["regions"]
+REGIONS_RHEMAC10 = config["CIS_TRANS_LIFTOVER"]["regions"]
 
 ID_TAG = config["TF_FOOTPRINTING_JASPAR"]["ID_TAG"]
 
@@ -68,7 +74,6 @@ def get_arch_id(filename):
 
 # ## get TF FP file to intersect 
 
-# In[6]:
 
 
 def get_tf_bound_file(f, filename, cell_line):
@@ -79,9 +84,6 @@ def get_tf_bound_file(f, filename, cell_line):
 
 
 # ## build a reference dict w/ all TF FP files for that species
-
-# In[7]:
-
 
 def get_tf_paths(path, cell_line, id_tag):
     """
@@ -95,9 +97,9 @@ def get_tf_paths(path, cell_line, id_tag):
     6. return dictionary
     """
     tf_dict ={}
-    
+
     #1
-    fs = glob.glob(os.path.join(path, f"*{id_tag}*"))
+    fs = glob.glob(os.path.join(fp_path, f"*{id_tag}*"))
     print(len(fs))
     for f in fs:
         #2
@@ -108,13 +110,13 @@ def get_tf_paths(path, cell_line, id_tag):
             tf_name = filename.split("_")[0]
         else:
             arch_id=get_arch_id(filename) #FOR ARCHTYPES ONLY
-            
+
             #4
             tf_name = "_".join((filename.split(arch_id)[1]).split("_")[:-1])  # get TF name by splitting string. 
 
-        
+
         #5
-        tf_bound_file = get_tf_bound_file(f, filename, cell_line)  # get path to TF bound.bed file
+        tf_bound_file = get_tf_bound_file(f, filename, cl)  # get path to TF bound.bed file
         #6
         tf_dict[arch_id] = (tf_name, tf_bound_file)
     
@@ -123,25 +125,24 @@ def get_tf_paths(path, cell_line, id_tag):
 
 # ## Intersect regions w FP
 
-# In[8]:
-
 
 def intersect_w_fp(regions, fp_name, fp_bed, outdir, cell_line, shuf):
     
     if shuf is True:
         cell_line = f"shuf-{cell_line}"
+
+    new_outdir = os.path.join(outdir, cell_line)
     
-    
-    if os.path.exists(os.path.join(outdir, cell_line)) is False:  # make a directory
-        os.mkdir(os.path.join(outdir, cell_line))
-        
-    out = os.path.join(outdir, cell_line, f"{cell_line}-{fp_name}.bed")
+    if os.path.exists(new_outdir) is False:
+        os.mkdir(new_outdir)
+
+    out = os.path.join(new_outdir, f"{cell_line}-{fp_name}.bed")
     
     if os.path.exists(out) is False:  # if intersection hasn't already been done. 
         
         bedregions = pbt.BedTool(regions)
     
-        bedregions.intersect(pbt.BedTool(fp_bed), wo = True).saveas(out)
+        bedregions.intersect(pbt.BedTool(fp_bed), wa = True).saveas(out)
         print(out)
     
     return out
@@ -150,27 +151,27 @@ def intersect_w_fp(regions, fp_name, fp_bed, outdir, cell_line, shuf):
 
 # ## combine all intersections 
 
-# In[9]:
 
 
-def concat_intersections(path, cell_line, out, id_tag, shuf):
+
+def concat_intersections(re_path, cell_line, outfile, id_tag, shuf):
 
     if shuf is True:
         cell_line = f"shuf-{cell_line}"
 
     # make query to concatenate all individual TF FP intersections
-    cat_query = os.path.join(path, cell_line, f"{cell_line}*{id_tag}*.bed" )
-    
-    if os.path.exists(out) is False:
-        cmd = f"cat {cat_query} > {out}"
+    cat_query = os.path.join(re_path, cell_line, f"{cell_line}*{id_tag}*.bed" )
+    cmd = f"cat {cat_query} > {outfile}"
+    print(cmd)
+    if os.path.exists(outfile) is False:
+
         subprocess.call(cmd, shell=True)
 
-    return out
+    return outfile
 
 
 # ## make matrix from combined intersections 
 
-# In[10]:
 
 
 """
@@ -237,7 +238,6 @@ def make_matrix(concat, matrix_outfile):
 
 # # pipeline function 
 
-# In[11]:
 
 
 def pipeline(outfile, cl, id_tag, regions, re, path, fp_path, shuf, matrix_outfile):
@@ -250,7 +250,7 @@ def pipeline(outfile, cl, id_tag, regions, re, path, fp_path, shuf, matrix_outfi
 
         out = intersect_w_fp(regions, k, FP_bed, re, cl, shuf)  # intersect regions w fp
 
-    concat = concat_intersections(path, cl, outfile, id_tag, shuf)
+    concat = concat_intersections(re, cl, outfile, id_tag, shuf)
     
     matrix = make_matrix(concat, matrix_outfile)
     
@@ -259,37 +259,36 @@ def pipeline(outfile, cl, id_tag, regions, re, path, fp_path, shuf, matrix_outfi
 
 # # main
 
-# In[ ]:
 
 
 results = {}
-CLS =["GM12878", "LCL8664"]
-for CL in CLS:
+CLS =[("GM12878", REGIONS, SHUF), ("LCL8664", REGIONS_RHEMAC10, SHUF_RHEMAC10)]
+for CL, regions, shuf in CLS:
    
     # get config for that CL
     FP_PATH = config["TF_FOOTPRINTING_JASPAR"][f"{CL}_bindetect"]
 
-    FP_RE = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["FP"] # write
+    FP_RE = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["FP_ALL"] # write
     MATRIX = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["matrix"] # write
 
-    FP_RE_SHUF = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["FP"] # write
+    FP_RE_SHUF = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["FP_ALLSHUF"] # write
     SHUF_MATRIX = config[f"TF_FOOTPRINTING_JASPAR_{CL}"]["matrix_shuf"] # write
-    
+
+
     SHUFFLED = False
-    cl_matrix = pipeline(FP_RE, CL, ID_TAG, REGIONS, RE, PATH, FP_PATH, SHUFFLED, MATRIX)
+    cl_matrix = pipeline(FP_RE, CL, ID_TAG, regions, RE, PATH, FP_PATH, SHUFFLED, MATRIX)
     results[CL] = cl_matrix # add to results dict
-    
+    print("shuf", CL)
     SHUFFLED = True
-    cl_matrix_shuf = pipeline(FP_RE_SHUF, CL, ID_TAG, SHUF, RE,PATH, FP_PATH, SHUFFLED, SHUF_MATRIX)
+    cl_matrix_shuf = pipeline(FP_RE_SHUF, CL, ID_TAG, shuf, RE,PATH, FP_PATH, SHUFFLED, SHUF_MATRIX)
     results[f"shuf-{CL}"] = cl_matrix_shuf # add to results dict
+
 
 
 # reference this:
 # https://stackoverflow.com/questions/44578571/intersect-two-boolean-arrays-for-true
 
-# # subtract hu frm rh matrix to get differential FP matrix
-
-# In[ ]:
+# # subtract hu frm rh matrix to get differential FP matrix, after liftingOver rhemac back to hg38
 
 
 hu = results["GM12878"]
@@ -297,7 +296,3 @@ rh = results["LCL8664"]
 
 
 # In[ ]:
-
-
-
-
